@@ -13,8 +13,8 @@
 
 ```js
 function solution(num1, num2) {
-  var answer = ~~(num1 / num2);
-  return answer;
+  var answer = ~~(num1 / num2)
+  return answer
 }
 ```
 
@@ -41,7 +41,7 @@ e.g. 5를 예시로 하면 `-(5+1) = -6` 다음에 다시 `-(-6+1) = 5`
 
 ```js
 function solution(num1, num2) {
-  return num1 === num2 ? 1 : -1;
+  return num1 === num2 ? 1 : -1
 }
 ```
 
@@ -60,7 +60,7 @@ function solution(num1, num2) {
 
 ```js
 function solution(age) {
-  return 2022 - age + 1;
+  return 2022 - age + 1
 }
 ```
 
@@ -81,13 +81,13 @@ function solution(age) {
 ```js
 function solution(angle) {
   if (angle < 90) {
-    return 1;
+    return 1
   } else if (angle === 90) {
-    return 2;
+    return 2
   } else if (angle < 180) {
-    return 3;
+    return 3
   } else {
-    return 4;
+    return 4
   }
 }
 ```
@@ -108,9 +108,9 @@ function solution(angle) {
 ```js
 function solution(n, k) {
   if (n >= 10) {
-    k -= ~~(n / 10);
+    k -= ~~(n / 10)
   }
-  return 12000 * n + 2000 * k;
+  return 12000 * n + 2000 * k
 }
 ```
 
@@ -133,7 +133,7 @@ function solution(n) {
     .fill()
     .map((_, i) => i + 1)
     .filter((v) => v % 2 === 0)
-    .reduce((a, c) => a + c, 0);
+    .reduce((a, c) => a + c, 0)
 }
 ```
 
@@ -142,8 +142,8 @@ array를 만드는 여러 방법들
 ```js
 Array(10)
   .fill()
-  .map((_, i) => i + 1);
-"0".repeat(10).split("");
+  .map((_, i) => i + 1)
+'0'.repeat(10).split('')
 ```
 
 reduce 사용법 [mdn link](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
@@ -168,7 +168,7 @@ reduce 사용법 [mdn link](https://developer.mozilla.org/ko/docs/Web/JavaScript
 
 ```js
 function solution(numbers) {
-  return numbers.reduce((a, c) => a + c, 0) / numbers.length;
+  return numbers.reduce((a, c) => a + c, 0) / numbers.length
 }
 ```
 
@@ -187,7 +187,7 @@ function solution(numbers) {
 
 ```js
 function solution(array, height) {
-  return array.filter((v) => v > height).length;
+  return array.filter((v) => v > height).length
 }
 ```
 
@@ -206,7 +206,7 @@ function solution(array, height) {
 
 ```js
 function solution(array, n) {
-  return array.filter((v) => v === n).length;
+  return array.filter((v) => v === n).length
 }
 ```
 
@@ -226,7 +226,7 @@ function solution(array, n) {
 
 ```js
 function solution(n) {
-  return Math.ceil(n / 7);
+  return Math.ceil(n / 7)
 }
 ```
 
@@ -245,22 +245,22 @@ function solution(n) {
 
 ```js
 function solution(num_list) {
-  let answer = [0, 0];
+  let answer = [0, 0]
   for (item of num_list) {
     if (item % 2 === 0) {
-      answer[0] += 1;
+      answer[0] += 1
     } else {
-      answer[1] += 1;
+      answer[1] += 1
     }
   }
-  return answer;
+  return answer
 }
 
-function solution(num_list) {
-  let answer = [0, 0];
+function solution2(num_list) {
+  let answer = [0, 0]
   for (item of num_list) {
-    answer[item % 2] += 1;
+    answer[item % 2] += 1
   }
-  return answer;
+  return answer
 }
 ```

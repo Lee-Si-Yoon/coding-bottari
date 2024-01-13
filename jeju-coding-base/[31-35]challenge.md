@@ -13,10 +13,10 @@
 
 ```js
 function solution(score) {
-  let sum = score.map((v) => v[0] + v[1]);
-  let sorted = [...sum].sort((a, b) => b - a);
+  let sum = score.map((v) => v[0] + v[1])
+  let sorted = [...sum].sort((a, b) => b - a)
 
-  return sum.map((v) => sorted.indexOf(v) + 1);
+  return sum.map((v) => sorted.indexOf(v) + 1)
 }
 ```
 
@@ -47,14 +47,14 @@ function solution(score) {
 
 ```js
 function solution(n) {
-  let answer = 0;
+  let answer = 0
   for (let i = 0; i < n; i++) {
-    answer += 1;
-    while (answer % 3 === 0 || answer.toString().split("").includes("3")) {
-      answer += 1;
+    answer += 1
+    while (answer % 3 === 0 || answer.toString().split('').includes('3')) {
+      answer += 1
     }
   }
-  return answer;
+  return answer
 }
 ```
 
@@ -74,30 +74,30 @@ function solution(n) {
 
 ```js
 function solution(polynomial) {
-  const arry = polynomial.split(" + ");
+  const arry = polynomial.split(' + ')
   const xS = arry
-    .filter((v) => v.includes("x"))
-    .map((v) => +v.replace("x", "") || 1);
-  const xSum = xS.length > 0 ? xS.reduce((a, c) => a + c) : 0;
+    .filter((v) => v.includes('x'))
+    .map((v) => +v.replace('x', '') || 1)
+  const xSum = xS.length > 0 ? xS.reduce((a, c) => a + c) : 0
   const others = arry
-    .filter((v) => !v.includes("x"))
-    .reduce((a, c) => a + parseInt(c), 0);
+    .filter((v) => !v.includes('x'))
+    .reduce((a, c) => a + parseInt(c), 0)
 
-  const answer = [];
+  const answer = []
 
   if (xSum) {
     if (xSum === 1) {
-      answer.push("x");
+      answer.push('x')
     } else {
-      answer.push(`${xSum}x`);
+      answer.push(`${xSum}x`)
     }
   }
 
   if (others) {
-    answer.push(others);
+    answer.push(others)
   }
 
-  return answer.join(" + ");
+  return answer.join(' + ')
 }
 ```
 
@@ -120,7 +120,7 @@ edge case를 잘 염두에 두자
 | [[0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 1, 1, 0], [0, 0, 0, 0, 0]]                                    | 13     |
 | [[1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1]] | 0      |
 
-```js
+```text
 [0, 0, 0, 0, 0];
 [0, 0, 0, 0, 0];
 [0, 0, 0, 0, 0];
@@ -140,7 +140,7 @@ edge case를 잘 염두에 두자
 
 ```js
 function solution(board) {
-  const n = board.length;
+  const n = board.length
   const d = [
     [0, 0],
     [0, 1],
@@ -151,77 +151,77 @@ function solution(board) {
     [-1, -1],
     [-1, 0],
     [-1, 1],
-  ];
-  let dangerZone = new Set();
+  ]
+  let dangerZone = new Set()
 
   for (let i = 0; i < n; i++) {
     for (let j = 0; j < n; j++) {
       // 지뢰인 경우
       if (board[i][j] === 1) {
         d.forEach((v) => {
-          let [col, row] = [i + v[0], j + v[1]];
+          let [col, row] = [i + v[0], j + v[1]]
           if (col >= 0 && col < n && row >= 0 && row < n) {
             // 중복을 원치 않는 경우 그냥 set에다 add 박아버리는 게 편함
-            dangerZone.add(col + " " + row);
+            dangerZone.add(col + ' ' + row)
           }
-        });
+        })
       }
     }
   }
 
-  return n * n - dangerZone.size;
+  return n * n - dangerZone.size
 }
 ```
 
 ```js
 d.forEach((v) => {
-  let [col, row] = [i + v[0], j + v[1]];
+  let [col, row] = [i + v[0], j + v[1]]
   if (col >= 0 && col < n && row >= 0 && row < n) {
-    dangerZone.add(col + " " + row);
+    dangerZone.add(col + ' ' + row)
   }
-});
+})
 
-이 부분에 대한 설명
+// 이 부분에 대한 설명
+;[0, 0, 0]
+;[0, 1, 0]
+;[0, 0, 0]
 
-[0, 0, 0];
-[0, 1, 0];
-[0, 0, 0];
+// 이렇게 중앙에서 발견하면 지뢰의 위치는 [1,1]
 
-이렇게 중앙에서 발견하면 지뢰의 위치는 [1,1]
+let [col, row] = [i + v[0], j + v[1]]
 
-let [col, row] = [i + v[0], j + v[1]];
+// 이걸 풀어보면
 
-이걸 풀어보면
+;[1, 1], [1, 2], [1, 0]
+;[2, 2], [2, 1], [2, 0]
+;[0, 0], [0, 1], [0, 2]
 
-[1,1], [1,2], [1,0];
-[2,2], [2,1], [2,0];
-[0,0], [0,1], [0,2];
+// 이걸 정렬해보면
+;[0, 0], [0, 1], [0, 2]
+;[1, 0], [1, 1], [1, 2]
+;[2, 0], [2, 1], [2, 2]
 
-이걸 정렬해보면
+/**
+ * 이렇게 [1,1] 주위로 1이 되어야 하는 곳들의 좌표를 반환함
+ * 그런데 edge case인 3번째를 보면
+ */
+;[1, 1, 1, 1, 1, 1]
+;[1, 1, 1, 1, 1, 1]
+;[1, 1, 1, 1, 1, 1]
+;[1, 1, 1, 1, 1, 1]
+;[1, 1, 1, 1, 1, 1]
+;[1, 1, 1, 1, 1, 1]
 
-[0,0], [0,1], [0,2];
-[1,0], [1,1], [1,2];
-[2,0], [2,1], [2,2];
+/**
+ * 와 같이 지뢰의 위치 때문에 col과 row가 음수 혹은 배열의 길이를
+ * 넘어가버리는 경우가 생기기에 조건문
+ */
 
-이렇게 [1,1] 주위로 1이 되어야 하는 곳들의 좌표를 반환함
-그런데 edge case인 3번째를 보면
+if (col >= 0 && col < n && row >= 0 && row < n) {
+}
 
-[1, 1, 1, 1, 1, 1];
-[1, 1, 1, 1, 1, 1];
-[1, 1, 1, 1, 1, 1];
-[1, 1, 1, 1, 1, 1];
-[1, 1, 1, 1, 1, 1];
-[1, 1, 1, 1, 1, 1];
-
-와 같이 지뢰의 위치 때문에 col과 row가 음수 혹은 배열의 길이를
-넘어가버리는 경우가 생기기에 조건문
-
-if (col >= 0 && col < n && row >= 0 && row < n)
-
-를 통과하는 애들만 set으로 밀어주기
+// 를 통과하는 애들만 set으로 밀어주기
 ```
-
----
 
 ## 35. 겹치는 선분의 길이
 
@@ -242,15 +242,15 @@ lines가 [[0, 2], [-3, -1], [-2, 1]]일 때 그림으로 나타내면 다음과 
 ```js
 function solution(lines) {
   // 200개 하는 이유는 제한사항에 -100 ≤ a < b ≤ 100
-  let line = new Array(200).fill(0);
+  let line = new Array(200).fill(0)
   lines.forEach(([min, max]) => {
     // for문에서 첫번째 인자 아예 생략 가능
     for (; min < max; min++) {
-      line[min + 100]++;
+      line[min + 100]++
     }
-  });
+  })
 
-  return line.filter((v) => v > 1).length;
+  return line.filter((v) => v > 1).length
 }
 ```
 

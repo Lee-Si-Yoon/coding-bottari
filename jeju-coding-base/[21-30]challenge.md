@@ -14,13 +14,13 @@
 
 ```js
 function solution(n) {
-  let i = 1;
-  let factorial = 1;
+  let i = 1
+  let factorial = 1
   while (factorial <= n) {
-    i += 1;
-    factorial *= i;
+    i += 1
+    factorial *= i
   }
-  return i - 1;
+  return i - 1
 }
 ```
 
@@ -54,24 +54,24 @@ function solution(i, j, k) {
     Array(j - i + 1)
       .fill(i)
       .map((v, index) => v + index)
-      .join("")
+      .join('')
       .split(k).length - 1
-  );
+  )
 }
 
-function solution(i, j, k) {
-  let s = "";
+function solution2(i, j, k) {
+  let s = ''
   for (i; i <= j; i++) {
-    s += i;
+    s += i
   }
-  return s.split(k).length - 1;
+  return s.split(k).length - 1
 }
 ```
 
 어떤 변수를 기준으로 split하면 그 기준이 되었던 변수 + 1 개의 value를 가진 array가 되는 것을 이용
 
 ```js
-"hotdog and pizza".split("h");
+'hotdog and pizza'.split('h')
 // ['', 'otdog and pizza'].length = 2
 // 하지만 h는 한개였으므로 -1 추가하기
 ```
@@ -93,26 +93,26 @@ function solution(i, j, k) {
 
 ```js
 function solution(array, n) {
-  array.sort((a, b) => a - b);
+  array.sort((a, b) => a - b)
 
-  let diff = Infinity;
-  let result = 0;
+  let diff = Infinity
+  let result = 0
 
   for (let i of array) {
     if (Math.abs(n - i) < diff) {
-      diff = Math.abs(n - i);
-      result = i;
+      diff = Math.abs(n - i)
+      result = i
     }
   }
 
-  return result;
+  return result
 }
 
-function solution(array, n) {
-  array.sort((a, b) => a - b);
+function solution2(array, n) {
+  array.sort((a, b) => a - b)
 
-  const index = Math.min(...array.map((a) => Math.abs(n - a)));
-  return array.find((a) => Math.abs(n - a) === index);
+  const index = Math.min(...array.map((a) => Math.abs(n - a)))
+  return array.find((a) => Math.abs(n - a) === index)
 }
 ```
 
@@ -139,15 +139,15 @@ function solution(s) {
       // split 했을때 한번만 나누면 length는 무조건 2
       .filter((v) => s.split(v).length == 2)
       .sort()
-      .join("")
-  );
+      .join('')
+  )
 }
 
-function solution(s) {
+function solution2(s) {
   return Array.from(s)
-    .filter((v) => s.match(new RegExp(v, "g")).length == 1)
+    .filter((v) => s.match(new RegExp(v, 'g')).length == 1)
     .sort()
-    .join("");
+    .join('')
 }
 ```
 
@@ -166,15 +166,15 @@ function solution(s) {
 
 ```js
 function solution(my_str, n) {
-  return my_str.match(new RegExp(`.{1,${n}}`, "g"));
+  return my_str.match(new RegExp(`.{1,${n}}`, 'g'))
 }
 
-function solution(my_str, n) {
-  let result = [];
+function solution2(my_str, n) {
+  let result = []
   for (let i = 0; i < my_str.length; i += n) {
-    result.push(my_str.slice(i, i + n));
+    result.push(my_str.slice(i, i + n))
   }
-  return result;
+  return result
 }
 ```
 
@@ -196,13 +196,13 @@ function solution(my_str, n) {
 
 ```js
 function solution(emergency) {
-  let order = emergency.slice().sort((a, b) => b - a);
-  return emergency.map((v) => order.indexOf(v) + 1);
+  let order = emergency.slice().sort((a, b) => b - a)
+  return emergency.map((v) => order.indexOf(v) + 1)
 }
 
-function solution(emergency) {
-  let order = [...emergency].sort((a, b) => b - a);
-  return emergency.map((v) => order.indexOf(v) + 1);
+function solution2(emergency) {
+  let order = [...emergency].sort((a, b) => b - a)
+  return emergency.map((v) => order.indexOf(v) + 1)
 }
 ```
 
@@ -234,27 +234,27 @@ function solution(numbers) {
     seven: 7,
     eight: 8,
     nine: 9,
-  };
+  }
 
   return +numbers.replace(
     /zero|one|two|three|four|five|six|seven|eight|nine/g,
     (v) => obj[v]
-  );
+  )
 }
 
-function solution(numbers) {
+function solution2(numbers) {
   numbers = numbers
-    .replaceAll("one", "1")
-    .replaceAll("two", "2")
-    .replaceAll("three", "3")
-    .replaceAll("four", "4")
-    .replaceAll("five", "5")
-    .replaceAll("six", "6")
-    .replaceAll("seven", "7")
-    .replaceAll("eight", "8")
-    .replaceAll("nine", "9")
-    .replaceAll("zero", "0");
-  return +numbers;
+    .replaceAll('one', '1')
+    .replaceAll('two', '2')
+    .replaceAll('three', '3')
+    .replaceAll('four', '4')
+    .replaceAll('five', '5')
+    .replaceAll('six', '6')
+    .replaceAll('seven', '7')
+    .replaceAll('eight', '8')
+    .replaceAll('nine', '9')
+    .replaceAll('zero', '0')
+  return +numbers
 }
 ```
 
@@ -280,15 +280,15 @@ function solution(spell, dic) {
     (v) => [...v].sort().toString() === [...spell].sort().toString()
   )
     ? 1
-    : 2;
+    : 2
 }
 ```
 
 배열이 같은지를 비교할 때
 
 ```js
-[1, 2, 3] === [1, 2, 3]; // false
-[(1, 2, 3)].toString() === [1, 2, 3].toString(); // true
+;[1, 2, 3] === [1, 2, 3] // false
+;[(1, 2, 3)].toString() === [1, 2, 3].toString() // true
 // 주소값을 참조하기 때문임
 ```
 
@@ -309,7 +309,7 @@ function solution(spell, dic) {
 
 ```js
 function solution(A, B) {
-  return (B + B).indexOf(A);
+  return (B + B).indexOf(A)
 }
 ```
 
@@ -352,15 +352,15 @@ A를 두번 반복시켜서 hellohello를 해보고 거기서 B가 어디있는�
 
 ```js
 function solution(s) {
-  s = s.split(" ");
-  let result = [];
+  s = s.split(' ')
+  let result = []
   for (let i of s) {
-    if (i === "Z") {
-      result.pop();
+    if (i === 'Z') {
+      result.pop()
     } else {
-      result.push(+i);
+      result.push(+i)
     }
   }
-  return result.reduce((a, c) => a + c, 0);
+  return result.reduce((a, c) => a + c, 0)
 }
 ```

@@ -13,7 +13,7 @@
 
 ```js
 function solution(numbers) {
-  return numbers.map((number) => number * 2);
+  return numbers.map((number) => number * 2)
 }
 ```
 
@@ -32,7 +32,7 @@ function solution(numbers) {
 
 ```js
 function solution(my_string) {
-  return Array.from(my_string).reverse().join("");
+  return Array.from(my_string).reverse().join('')
 }
 ```
 
@@ -51,11 +51,11 @@ function solution(my_string) {
 
 ```js
 function solution(my_string, letter) {
-  return my_string.replaceAll(letter, "");
+  return my_string.replaceAll(letter, '')
 }
-function solution(my_string, letter) {
-  let reg = new RegExp(letter, "g");
-  return my_string.replace(reg, "");
+function solution2(my_string, letter) {
+  let reg = new RegExp(letter, 'g')
+  return my_string.replace(reg, '')
 }
 ```
 
@@ -76,10 +76,10 @@ function solution(my_string, letter) {
 
 ```js
 function solution(s1, s2) {
-  return s1.filter((v) => s2.includes(v)).length;
+  return s1.filter((v) => s2.includes(v)).length
 }
-function solution(s1, s2) {
-  return s1.length + s2.length - new Set([...s1, ...s2]).size;
+function solutio2(s1, s2) {
+  return s1.length + s2.length - new Set([...s1, ...s2]).size
 } // 교집합 + set은 중복이 없는 점을 이용
 ```
 
@@ -98,10 +98,10 @@ function solution(s1, s2) {
 
 ```js
 function solution(rsp) {
-  let answer = { 0: "5", 2: "0", 5: "2" };
+  let answer = { 0: '5', 2: '0', 5: '2' }
   return Array.from(rsp)
     .map((v) => answer[v])
-    .join("");
+    .join('')
 }
 ```
 
@@ -120,12 +120,12 @@ function solution(rsp) {
 
 ```js
 function solution(numbers, direction) {
-  if (direction === "right") {
-    numbers.unshift(numbers.pop());
+  if (direction === 'right') {
+    numbers.unshift(numbers.pop())
   } else {
-    numbers.push(numbers.shift());
+    numbers.push(numbers.shift())
   }
-  return numbers;
+  return numbers
 }
 ```
 
@@ -148,9 +148,9 @@ function solution(age) {
   return (
     Array.from(age.toString())
       // 문자열도 index로 접근 가능
-      .map((v) => "abcdefghij"[v])
-      .join("")
-  );
+      .map((v) => 'abcdefghij'[v])
+      .join('')
+  )
 }
 ```
 
@@ -170,16 +170,16 @@ function solution(age) {
 ```js
 function solution(order) {
   // order에 3,6,9가 하나도 없을 경우 null 이기에
-  let value = order.toString().match(/[369]/g) ?? [];
-  return value.length;
+  let value = order.toString().match(/[369]/g) ?? []
+  return value.length
 }
 
-function solution(order) {
-  const s = new Set("369");
+function solution2(order) {
+  const s = new Set('369')
   return order
     .toString()
-    .split("")
-    .filter((v) => s.has(v)).length;
+    .split('')
+    .filter((v) => s.has(v)).length
 }
 ```
 
@@ -198,7 +198,7 @@ function solution(order) {
 
 ```js
 function solution(my_string) {
-  return [...new Set(my_string)].join("");
+  return [...new Set(my_string)].join('')
 }
 ```
 
@@ -219,9 +219,9 @@ function solution(my_string) {
 
 ```js
 function solution(before, after) {
-  return before.split("").sort().join("") === after.split("").sort().join("")
+  return before.split('').sort().join('') === after.split('').sort().join('')
     ? 1
-    : 0;
+    : 0
 }
 ```
 
