@@ -11,9 +11,5 @@
   * [tsc](tsc-eslint/tsc.md)
 * [나동빈-코딩테스트](나동빈-코딩테스트/README.md)
   * [greedy](나동빈-코딩테스트/greedy/README.md)
-    * [1](나동빈-코딩테스트/greedy/1.md)
-    * [2](나동빈-코딩테스트/greedy/2.md)
-
-## Function programming
-
-* [빛 좋은 개살구 - 선언형 프로그래밍?](function-programming/undefined.md)
+    * [1](undefined/greedy/1.md)
+    * [2](undefined/greedy/2.md)
