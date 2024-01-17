@@ -7,9 +7,9 @@
 
 [링크](https://kpug.github.io/fp-gitbook/Chapter3.html)
 
-* 집합(Set): e.g. 정수집합
-* 마그마(Magma): 집합에 이항 연산자를 추가한 것
-* 반군(Semigroup): 마그마가 결합법칙을 만족한 것
+- 집합(Set): e.g. 정수집합
+- 마그마(Magma): 집합에 이항 연산자를 추가한 것
+- 반군(Semigroup): 마그마가 결합법칙을 만족한 것
 
 결합 법칙은 연산의 결과가 연산의 순서에 영향을 받거나 받지 않는 것을 말한다.
 정수의 덧셈을 보면, 5+2+4 의 연산에 대해 (5+2)+4 와 5+(2+4)의 결과는 항상 같다.
@@ -37,10 +37,10 @@ op(op(1, 2), op(3, 4))
 
 모노이드는 함수형 프로그래밍에서 다음의 몇 가지 주요 원칙과 잘 어울립니다.
 
-* 합성 가능성(Composability): 모노이드는 결합법칙이 성립하기 때문에, 순서에 상관없이 작은 단위의 연산을 조합하여 더 큰 연산을 구성할 수 있습니다.
-* 불변성(Immutability): 모노이드는 불변성과 관련이 깊습니다. 모노이드 연산은 새로운 값을 생성하기 때문에 기존의 값을 변경하지 않습니다.
-* 추상화(Abstraction): 모노이드는 다양한 자료구조와 알고리즘에 일반화될 수 있는 추상적인 개념입니다.
-* 병렬 처리(Parallelism): 모노이드는 결합법칙을 만족하므로, 병렬 처리에 유리합니다. 연산 순서가 중요하지 않기 때문에, 여러 서브태스크로 쪼개어 동시에 실행하고 그 결과를 다시 결합할 수 있습니다.
+- 합성 가능성(Composability): 모노이드는 결합법칙이 성립하기 때문에, 순서에 상관없이 작은 단위의 연산을 조합하여 더 큰 연산을 구성할 수 있습니다.
+- 불변성(Immutability): 모노이드는 불변성과 관련이 깊습니다. 모노이드 연산은 새로운 값을 생성하기 때문에 기존의 값을 변경하지 않습니다.
+- 추상화(Abstraction): 모노이드는 다양한 자료구조와 알고리즘에 일반화될 수 있는 추상적인 개념입니다.
+- 병렬 처리(Parallelism): 모노이드는 결합법칙을 만족하므로, 병렬 처리에 유리합니다. 연산 순서가 중요하지 않기 때문에, 여러 서브태스크로 쪼개어 동시에 실행하고 그 결과를 다시 결합할 수 있습니다.
 
 모노이드는 하나의 집합에 이항 연산이 정의되어 있고, 그 연산이 결합법칙을 만족하며 항등원이 존재하는 대수 구조로, 함수형 프로그래밍에서 합성 가능성, 불변성, 추상화 및 병렬 처리와 같은 특성을 지원합니다.
 
@@ -48,29 +48,29 @@ op(op(1, 2), op(3, 4))
 // 모노이드 인터페이스를 정의합니다.
 interface Monoid<T> {
   // 항등원: 이항 연산에서 어떤 값과 연산했을 때 그대로 반환되는 값을 의미합니다.
-  empty: () => T;
-  
+  empty: () => T
+
   // 이항 연산: 두 개의 값을 결합하는 함수입니다. 결합법칙이 성립해야 합니다.
   // (a ⊕ b) ⊕ c = a ⊕ (b ⊕ c)
-  concat: (a: T, b: T) => T;
+  concat: (a: T, b: T) => T
 }
 
 // 숫자 합 모노이드.
 const sumMonoid: Monoid<number> = {
   empty: () => 0, // 항등원: 0
   concat: (a: number, b: number) => a + b, // 이항 연산: 숫자 합산
-};
+}
 
 // fold 함수를 이용하여 주어진 배열을 모노이드 연산으로 축약합니다.
 // 이 함수는 재사용 가능하며, 다양한 모노이드 인스턴스를 사용할 수 있습니다.
 function fold<T>(monoid: Monoid<T>, values: T[]): T {
-  return values.reduce((acc, val) => monoid.concat(acc, val), monoid.empty());
+  return values.reduce((acc, val) => monoid.concat(acc, val), monoid.empty())
 }
 
 // 숫자 합 모노이드를 이용하여 숫자 배열의 합을 구합니다.
-const numbers = [1, 2, 3, 4, 5];
-const sum = fold(sumMonoid, numbers);
-console.log(sum); // 출력: 15
+const numbers = [1, 2, 3, 4, 5]
+const sum = fold(sumMonoid, numbers)
+console.log(sum) // 출력: 15
 ```
 
 ## By lionhairdino

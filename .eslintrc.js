@@ -7,8 +7,15 @@ module.exports = {
       env: {
         node: true,
       },
-      files: ['structures/**/*.ts'],
-      extends: ['standard-with-typescript', 'eslint:recommended', 'prettier'],
+      files: ['structures/**/*.ts', 'math/**/*.ts'],
+      extends: [
+        'standard-with-typescript',
+        'plugin:@typescript-eslint/eslint-recommended',
+        'plugin:@typescript-eslint/recommended',
+        'eslint:recommended',
+        'prettier',
+      ],
+      parser: '@typescript-eslint/parser',
       parserOptions: {
         sourceType: 'module',
         ecmaVersion: 'latest',
@@ -29,24 +36,28 @@ module.exports = {
         ecmaVersion: 'latest',
       },
     },
-    {
-      files: ['**/*.{mdx,md}'],
-      extends: ['plugin:markdown/recommended'],
-      processor: 'markdown/markdown',
-    },
-    {
-      files: ['**/*.md/*.{js,jsx}'],
-      parserOptions: {
-        sourceType: 'module',
-        ecmaVersion: 'latest',
-      },
-    },
-    {
-      files: ['**/*.md/*.{ts,tsx}'],
-      parserOptions: {
-        sourceType: 'module',
-        ecmaVersion: 'latest',
-      },
-    },
+    // {
+    //   files: ['**/*.{mdx,md}'],
+    //   extends: ['plugin:markdown/recommended'],
+    //   processor: 'markdown/markdown',
+    // },
+    // {
+    //   files: ['**/*.md/*.js'],
+    //   parserOptions: {
+    //     sourceType: 'module',
+    //     ecmaVersion: 'latest',
+    //   },
+    // },
+    // {
+    //   files: ['**/*.md/*.ts'],
+    //   env: {
+    //     node: true,
+    //   },
+    //   parser: '@typescript-eslint/parser',
+    //   parserOptions: {
+    //     sourceType: 'module',
+    //     ecmaVersion: 'latest',
+    //   },
+    // },
   ],
 }

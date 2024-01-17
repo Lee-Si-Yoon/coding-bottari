@@ -3,13 +3,13 @@
 ## 자연수 natural number
 
 ```js
-const 자연수 = [1, 2, 3, 4, 5];
+const 자연수 = [1, 2, 3, 4, 5]
 ```
 
 ## 정수 integer
 
 ```js
-const 정수 = [-1, 0, 1];
+const 정수 = [-1, 0, 1]
 ```
 
 ## 분수 rational number
@@ -17,7 +17,7 @@ const 정수 = [-1, 0, 1];
 분수, 끝이 없는 유한소수, 무한소수 중에서 규칙이 있는 소수인 순환소수 -> 어쨋거나 분수로 표현가능
 
 ```js
-const 유리수 = [1 / 4, 0.1, 2.34, 0.3333333];
+const 유리수 = [1 / 4, 0.1, 2.34, 0.3333333]
 ```
 
 ## 무리수 irrational number
@@ -25,7 +25,7 @@ const 유리수 = [1 / 4, 0.1, 2.34, 0.3333333];
 무한소수 중에서 규칙이 없는 소수인 비순환 소수, 존재하지만 반복도 끝도 없는 수
 
 ```js
-const 무리수 = [Math.sqrt(2), Math.PI];
+const 무리수 = [Math.sqrt(2), Math.PI]
 ```
 
 ## 실수 float
@@ -33,7 +33,7 @@ const 무리수 = [Math.sqrt(2), Math.PI];
 유리수 + 무리수
 
 ```js
-const 실수 = [1 / 4, 0.1, Math.sqrt(2), Math.PI];
+const 실수 = [1 / 4, 0.1, Math.sqrt(2), Math.PI]
 ```
 
 ## 복소수 complex number
@@ -51,7 +51,7 @@ i = Math.sqrt(-1)
 
 ```js
 // TODO
-const 복소수 = [];
+const 복소수 = []
 ```
 
 ## 사원수 quaternion
@@ -60,5 +60,5 @@ const 복소수 = [];
 
 ```js
 // TODO
-const 사원수 = [];
+const 사원수 = []
 ```

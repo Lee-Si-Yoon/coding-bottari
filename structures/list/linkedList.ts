@@ -7,6 +7,7 @@ class ListNode<T> {
     this.next = next
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   toString(callback?: (value: any) => string): string {
     return callback !== undefined
       ? callback(this.data)

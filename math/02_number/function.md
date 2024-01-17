@@ -10,13 +10,13 @@
 X --f--> Y
 1 -----> a
 2 --↘️    b
-     --> c   
+     --> c
 ```
 
-* 대응: 화살 궤적
-* 정의역: 궁사, X의 원소들중 화살을 쏘는 놈
-* 공역: 빈 과녁, Y의 원소들중 X의 화살을 맞지 않은 놈, 과녁은 선택권이 없다
-* 치역: 맞은 과녁, Y의 원소들중 X의 화살을 맞은 놈
+- 대응: 화살 궤적
+- 정의역: 궁사, X의 원소들중 화살을 쏘는 놈
+- 공역: 빈 과녁, Y의 원소들중 X의 화살을 맞지 않은 놈, 과녁은 선택권이 없다
+- 치역: 맞은 과녁, Y의 원소들중 X의 화살을 맞은 놈
 
 치역은 공역의 부분집합, 치역 ⊂ 공역
 
@@ -26,27 +26,27 @@ X --f--> Y
 
 그래프에 세로줄을 딱 그어봤을 때 교점이 하나만 나오면 그건 함수라고 볼 수 있다
 
-```js
+```ts
 // 원래 함수 f(x) = x^2
 function originalFunction(x: number) {
-  return x ** 2;
+  return x ** 2
 }
 
 // 합성함수 g(x) = f(f(x))
 function compositeFunction(x: number) {
-  return originalFunction(originalFunction(x));
+  return originalFunction(originalFunction(x))
 }
 
 // 역함수
 function inverseFunction(y: number) {
-  return Math.sqrt(Math.sqrt(y));
+  return Math.sqrt(Math.sqrt(y))
 }
 
 // 테스트
-console.log(originalFunction(2), 4);
+console.log(originalFunction(2), 4)
 // originalFunction(originalFunction(2)) = originalFunction(4) = 16;
-console.log(compositeFunction(2), 16);
-console.log(inverseFunction(16), 2);
+console.log(compositeFunction(2), 16)
+console.log(inverseFunction(16), 2)
 // (compositeFunction(inverseFunction(16)) = compositeFunction(2) = 16)
-console.log(compositeFunction(inverseFunction(16)), 16);
+console.log(compositeFunction(inverseFunction(16)), 16)
 ```

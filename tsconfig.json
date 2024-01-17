@@ -26,6 +26,11 @@
     "types": [],
     "typeRoots": ["./node_modules/@types"]
   },
-  "include": ["structures"],
-  "exclude": ["node_modules", "dist"]
+  "include": [
+    "structures/**/*.js",
+    "structures/**/*.ts",
+    "math/**/*.js",
+    "math/**/*.ts"
+  ],
+  "exclude": ["node_modules", "dist", "**/*.md", ".eslintrc.js"]
 }
