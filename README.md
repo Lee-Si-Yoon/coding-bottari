@@ -1,3 +1,3 @@
 # coding-bottari
 
-- [js regex official doc](https://javascript.info/regular-expressions)
+[pnpm workspace with nx](https://www.youtube.com/watch?v=ngdoUQBvAjo)

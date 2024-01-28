@@ -27,8 +27,8 @@
     "typeRoots": ["./node_modules/@types"]
   },
   "include": [
-    "structures/**/*.js",
-    "structures/**/*.ts",
+    "packages/structures/**/*.js",
+    "packages/structures/**/*.ts",
     "math/**/*.js",
     "math/**/*.ts"
   ],

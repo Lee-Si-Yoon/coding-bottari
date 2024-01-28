@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+      /* Bundler mode */
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true,
+      "jsx": "react-jsx",
+      "outDir": "./dist",
+  
+      /* Linting */
+      "strict": true,
+    },
+    "include": ["."],
+    "exclude": ["node_modules", "dist"]
+  }
+  
