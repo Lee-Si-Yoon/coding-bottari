@@ -1,13 +1,12 @@
 /**
  * @type {import("eslint").Linter.Config}
+ * FIXME: make lint work
  */
 module.exports = {
+  root: true,
   overrides: [
     {
-      env: {
-        node: true,
-      },
-      files: ['structures/**/*.ts', 'math/**/*.ts'],
+      files: ['*.ts', '*.tsx'],
       extends: [
         'standard-with-typescript',
         'plugin:@typescript-eslint/eslint-recommended',
@@ -15,49 +14,10 @@ module.exports = {
         'eslint:recommended',
         'prettier',
       ],
-      parser: '@typescript-eslint/parser',
-      parserOptions: {
-        sourceType: 'module',
-        ecmaVersion: 'latest',
-        project: ['./tsconfig.json'],
-      },
-      rules: {
-        '@typescript-eslint/space-before-function-paren': 'off',
-      },
     },
     {
-      env: {
-        node: true,
-      },
-      extends: ['prettier'],
-      files: ['structures/**/*.js'],
-      parserOptions: {
-        sourceType: 'module',
-        ecmaVersion: 'latest',
-      },
+      files: ['*.js'],
+      extends: ['prettier', 'eslint:recommended'],
     },
-    // {
-    //   files: ['**/*.{mdx,md}'],
-    //   extends: ['plugin:markdown/recommended'],
-    //   processor: 'markdown/markdown',
-    // },
-    // {
-    //   files: ['**/*.md/*.js'],
-    //   parserOptions: {
-    //     sourceType: 'module',
-    //     ecmaVersion: 'latest',
-    //   },
-    // },
-    // {
-    //   files: ['**/*.md/*.ts'],
-    //   env: {
-    //     node: true,
-    //   },
-    //   parser: '@typescript-eslint/parser',
-    //   parserOptions: {
-    //     sourceType: 'module',
-    //     ecmaVersion: 'latest',
-    //   },
-    // },
   ],
-}
+};

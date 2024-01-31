@@ -1,15 +1,8 @@
 {
-    "compilerOptions": {
-      /* Bundler mode */
-      "esModuleInterop": true,
-      "allowSyntheticDefaultImports": true,
-      "jsx": "react-jsx",
-      "outDir": "./dist",
-  
-      /* Linting */
-      "strict": true,
-    },
-    "include": ["."],
-    "exclude": ["node_modules", "dist"]
-  }
-  
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "jsx": "react-jsx",
+  },
+  "include": ["src/**/*.ts", "src/**/*.js"],
+}

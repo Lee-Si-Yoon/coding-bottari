@@ -27,7 +27,7 @@ cask "notion"
 cask "slack"
 cask "drawio"
 mas "KakaoTalk", id: 869223134
-mas "Xcode", id: 497799835 
+mas "Xcode", id: 497799835
 ```
 
 root directory에 `Brewfile`이라는 파일을 생성하고 brew 명령어로 이루어진 설치 목록을 작성한다

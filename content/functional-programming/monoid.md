@@ -22,11 +22,11 @@
 
 ```js
 // 결합 법칙을 만족해서 아래 두 연산 동일 결과 반환
-op(op(op(1, 2), 3), 4) // foldLeft
-op(1, op(2, op(3, 4))) // foldRight
+op(op(op(1, 2), 3), 4); // foldLeft
+op(1, op(2, op(3, 4))); // foldRight
 
 // 아래 연산도 같은 결과, 병렬처리 가능
-op(op(1, 2), op(3, 4))
+op(op(1, 2), op(3, 4));
 ```
 
 ## By The Man
@@ -48,29 +48,29 @@ op(op(1, 2), op(3, 4))
 // 모노이드 인터페이스를 정의합니다.
 interface Monoid<T> {
   // 항등원: 이항 연산에서 어떤 값과 연산했을 때 그대로 반환되는 값을 의미합니다.
-  empty: () => T
+  empty: () => T;
 
   // 이항 연산: 두 개의 값을 결합하는 함수입니다. 결합법칙이 성립해야 합니다.
   // (a ⊕ b) ⊕ c = a ⊕ (b ⊕ c)
-  concat: (a: T, b: T) => T
+  concat: (a: T, b: T) => T;
 }
 
 // 숫자 합 모노이드.
 const sumMonoid: Monoid<number> = {
   empty: () => 0, // 항등원: 0
   concat: (a: number, b: number) => a + b, // 이항 연산: 숫자 합산
-}
+};
 
 // fold 함수를 이용하여 주어진 배열을 모노이드 연산으로 축약합니다.
 // 이 함수는 재사용 가능하며, 다양한 모노이드 인스턴스를 사용할 수 있습니다.
 function fold<T>(monoid: Monoid<T>, values: T[]): T {
-  return values.reduce((acc, val) => monoid.concat(acc, val), monoid.empty())
+  return values.reduce((acc, val) => monoid.concat(acc, val), monoid.empty());
 }
 
 // 숫자 합 모노이드를 이용하여 숫자 배열의 합을 구합니다.
-const numbers = [1, 2, 3, 4, 5]
-const sum = fold(sumMonoid, numbers)
-console.log(sum) // 출력: 15
+const numbers = [1, 2, 3, 4, 5];
+const sum = fold(sumMonoid, numbers);
+console.log(sum); // 출력: 15
 ```
 
 ## By lionhairdino

@@ -28,7 +28,7 @@ map은 내부의 요소들만 수정하며, 타입을 변경하지는 않는다.
 항등 함수를 적용한다면 자기 자신이며 아래와 같은 수식 만족한다
 
 ```js
-x.map((a) => a) == x
+x.map(a => a) == x;
 ```
 
 펑터는 map함수만으로도 추가적인 유용한 연산들을 정의 가능해짐
@@ -52,17 +52,17 @@ x --f--> y           F(x)--F(f)-->F(y)
 ```
 
 ```js
-const 대상x = 1
-const 대상y = 2
-const 사상f = (x) => x + 1
+const 대상x = 1;
+const 대상y = 2;
+const 사상f = x => x + 1;
 
-사상f(대상x) === 대상y // true
+사상f(대상x) === 대상y; // true
 
-const 대상x_2 = 펑터(1)
-const 대상y_2 = 펑터(2)
-const 사상f_2 = 펑터((x) => x + 1)
+const 대상x_2 = 펑터(1);
+const 대상y_2 = 펑터(2);
+const 사상f_2 = 펑터(x => x + 1);
 
-사상f_2(대상x_2) === 대상y_2 // true
+사상f_2(대상x_2) === 대상y_2; // true
 ```
 
 위와 같이 카테고리를 다른 카테고리로 바꿔주는 행위(mapping)를 할 수 있으면 펑터
@@ -70,13 +70,13 @@ const 사상f_2 = 펑터((x) => x + 1)
 
 ```ts
 // Functor<number>
-const array: Array<number> = [1, 2, 3]
+const array: Array<number> = [1, 2, 3];
 
 // 트랜스폼 함수: (x: number) => string
-const toString = (v) => v.toString()
+const toString = v => v.toString();
 
 // 매핑!
-array.map(toString)
+array.map(toString);
 
 // 새로운 펑터 Functor<string>
 // ['1', '2', '3']
@@ -140,16 +140,16 @@ functoriality
 일반 함수로 구현할 수도 있다.
 
 ```js
-const Functor = (value) => ({
+const Functor = value => ({
   value,
-  map: (fn) => Functor(fn(v)),
-})
+  map: fn => Functor(fn(v)),
+});
 ```
 
 그렇다면 이 코드는 어떤가?
 
 ```js
-const cat = (is, awesome) => ({ ...awesome, value: is(awesome.value) })
+const cat = (is, awesome) => ({ ...awesome, value: is(awesome.value) });
 ```
 
 value 속성을 가진 타입의 오브젝트와 cat함수는 펑터를 형성한다고 말할 수 있다.

@@ -4,9 +4,9 @@
 
 [homebrew 용어집](https://docs.brew.sh/Manpage)
 
-* formula: brew로 바로 설치 가능한것들(Homebrew package definition)
-* cask: 서드파티 프로그램들(macOS native applications)
-* tap: formulae, casks 그리고 external commands들의 디렉토리
+- formula: brew로 바로 설치 가능한것들(Homebrew package definition)
+- cask: 서드파티 프로그램들(macOS native applications)
+- tap: formulae, casks 그리고 external commands들의 디렉토리
 
 ## 기능들
 

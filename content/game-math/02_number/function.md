@@ -29,24 +29,24 @@ X --f--> Y
 ```ts
 // 원래 함수 f(x) = x^2
 function originalFunction(x: number) {
-  return x ** 2
+  return x ** 2;
 }
 
 // 합성함수 g(x) = f(f(x))
 function compositeFunction(x: number) {
-  return originalFunction(originalFunction(x))
+  return originalFunction(originalFunction(x));
 }
 
 // 역함수
 function inverseFunction(y: number) {
-  return Math.sqrt(Math.sqrt(y))
+  return Math.sqrt(Math.sqrt(y));
 }
 
 // 테스트
-console.log(originalFunction(2), 4)
+console.log(originalFunction(2), 4);
 // originalFunction(originalFunction(2)) = originalFunction(4) = 16;
-console.log(compositeFunction(2), 16)
-console.log(inverseFunction(16), 2)
+console.log(compositeFunction(2), 16);
+console.log(inverseFunction(16), 2);
 // (compositeFunction(inverseFunction(16)) = compositeFunction(2) = 16)
-console.log(compositeFunction(inverseFunction(16)), 16)
+console.log(compositeFunction(inverseFunction(16)), 16);
 ```

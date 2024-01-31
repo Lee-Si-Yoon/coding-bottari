@@ -4,7 +4,7 @@
 brew install nvm
 
 # 폴더 생성 - 이미 되어 있을 수도 있음
-mkdir ~/.nvm 
+mkdir ~/.nvm
 
 # zsh 기본설정 변경
 open ~/.zshrc
