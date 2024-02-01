@@ -15,14 +15,16 @@
     "docs": "doctoc --title '**Table of content**' README.md",
     "lint": "eslint --ext js,ts,tsx .",
     "pretty": "npx prettier --write .",
-    "clean": "pnpm run -r clean",
-    "build": "pnpm run -r build"
+    "clean": "pnpm lerna run clean",
+    "build": "pnpm lerna run build"
   },
   "devDependencies": {
     "doctoc": "^2.2.1",
     "eslint": "^8.56.0",
     "eslint-plugin-import": "^2.29.1",
+    "lerna": "^8.0.2",
     "prettier": "^3.2.1",
     "typescript": "^5.3.3"
-  }
+  },
+  "dependencies": {}
 }
