@@ -1,4 +1,4 @@
 packages:
-  - 'client/*'
-  - 'content/*'
+  - 'apps/*'
+  - 'contents/*'
   - 'packages/*'

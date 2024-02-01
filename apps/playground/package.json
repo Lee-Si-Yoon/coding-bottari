@@ -1,5 +1,5 @@
 {
-  "name": "playground",
+  "name": "@bottari/play",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,7 +10,7 @@
     "clean": "rimraf dist"
   },
   "dependencies": {
-    "bottari-ui": "workspace:*",
+    "@bottari/ui": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

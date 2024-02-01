@@ -2,14 +2,18 @@
   "compilerOptions": {
     "module": "commonjs",
     "target": "es5",
-    "sourceMap": true,
-    "strict": true,
-    "noImplicitAny": true,
+
+    "noEmit": false,
     "declaration": true,
     "declarationMap": true,
-    "noEmitOnError": true,
+    "sourceMap": true,
     "skipLibCheck": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+
+    "strict": true,
+    "noImplicitAny": true,
+
+    "noEmitOnError": true
   },
   "exclude": ["node_modules", "dist"]
 }

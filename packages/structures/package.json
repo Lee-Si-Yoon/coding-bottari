@@ -1,5 +1,5 @@
 {
-  "name": "structures",
+  "name": "@bottari/structures",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index",
@@ -10,7 +10,7 @@
   "scripts": {
     "build": "pnpm run clean && pnpm run compile",
     "clean": "rimraf ./dist",
-    "compile": "tsc -p tsconfig.json"
+    "compile": "tsc -p tsconfig.build.json"
   },
   "devDependencies": {
     "rimraf": "^5.0.5",
