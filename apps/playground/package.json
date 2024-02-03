@@ -1,12 +1,13 @@
 {
-  "name": "@bottari/play",
+  "name": "@bottari/playground",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview",
-    "clean": "rimraf dist"
+    "clean": "rimraf dist",
+    "dev": "vite",
+    "lint": "eslint . --config ./.eslintrc.cjs",
+    "preview": "vite preview"
   },
   "dependencies": {
     "@bottari/ui": "workspace:*",

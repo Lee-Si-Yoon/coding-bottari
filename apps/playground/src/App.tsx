@@ -1,12 +1,16 @@
 import { CustomButton } from '@bottari/ui';
 import './App.css';
 
-function App() {
+function App(): JSX.Element {
   return (
-    <>
-      <CustomButton>button</CustomButton>
-    </>
+    <CustomButton
+      onClick={() => {
+        window.alert('clicked');
+      }}
+    >
+      button
+    </CustomButton>
   );
 }
 
-export default App;
+export { App };

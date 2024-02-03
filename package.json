@@ -1,30 +1,32 @@
 {
   "name": "coding-bottari",
   "version": "1.0.0",
-  "description": "",
   "private": true,
+  "description": "",
   "keywords": [],
-  "author": "Lee Siyoon",
   "license": "ISC",
+  "author": "Lee Siyoon",
   "workspaces": [
     "apps/*",
     "contents/*",
     "packages/*"
   ],
   "scripts": {
-    "docs": "doctoc --title '**Table of content**' README.md",
-    "lint": "eslint --ext js,ts,tsx .",
-    "pretty": "npx prettier --write .",
+    "build": "pnpm lerna run build",
     "clean": "pnpm lerna run clean",
-    "build": "pnpm lerna run build"
+    "docs": "doctoc --title '**Table of content**' README.md",
+    "lint": "pnpm lerna run lint",
+    "pretty": "npx prettier --write ."
   },
+  "prettier": "@vercel/style-guide/prettier",
   "devDependencies": {
+    "@next/eslint-plugin-next": "^14.1.0",
+    "@vercel/style-guide": "^5.2.0",
     "doctoc": "^2.2.1",
     "eslint": "^8.56.0",
     "eslint-plugin-import": "^2.29.1",
     "lerna": "^8.0.2",
     "prettier": "^3.2.1",
     "typescript": "^5.3.3"
-  },
-  "dependencies": {}
+  }
 }

@@ -7,17 +7,14 @@ class ListNode<T> {
     this.next = next;
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  toString(callback?: (value: any) => string): string {
-    return callback !== undefined
-      ? callback(this.data)
-      : `${this.data as string}`;
+  toString(callback?: (value: unknown) => string): string {
+    return callback !== undefined ? callback(this.data) : (this.data as string);
   }
 }
 
 class LinkedList<T> {
   head: ListNode<T> | null | undefined;
-  size: number = 0;
+  size = 0;
 
   constructor() {
     this.head = null;
@@ -119,7 +116,7 @@ class LinkedList<T> {
     let current = this.head;
 
     while (current !== null && current !== undefined) {
-      console.log(current.data);
+      // console.log(current.data);
       current = current.next;
     }
   }
@@ -135,6 +132,5 @@ linkedList.insertAt(500, 1);
 
 linkedList.printListData();
 
-const secondItem = linkedList.getAt(2);
-
-console.log(secondItem);
+// const secondItem = linkedList.getAt(2);
+// console.log(secondItem);

@@ -1,5 +1,17 @@
-export function CustomButton(props: any) {
-  return <button onClick={() => props.onClick()}>{props.label}</button>;
+export function CustomButton(props: {
+  children?: React.ReactNode;
+  onClick?: VoidFunction;
+}): JSX.Element {
+  return (
+    <button
+      onClick={() => {
+        if (props.onClick) {
+          props.onClick();
+        }
+      }}
+      type="button"
+    >
+      {props.children}
+    </button>
+  );
 }
-
-export default CustomButton;
