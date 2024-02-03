@@ -4,10 +4,8 @@
   "scripts": {
     "build": "pnpm run clean && pnpm run compile",
     "clean": "rimraf ./dist",
-    "compile": "tsc -p tsconfig.build.json"
-  },
-  "peerDependencies": {
-    "react": "~18.2.0"
+    "compile": "tsc -p tsconfig.build.json",
+    "lint": "eslint . --config ./.eslintrc.cjs"
   },
   "dependencies": {
     "@bottari/structures": "workspace:*"
@@ -17,5 +15,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rimraf": "^5.0.5"
+  },
+  "peerDependencies": {
+    "react": "~18.2.0"
   }
 }
