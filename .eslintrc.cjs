@@ -13,4 +13,17 @@ module.exports = {
   root: true,
   ignorePatterns: ['**/*'],
   overrides: [],
+  settings: {
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
+    },
+    'import/resolver': {
+      typescript: {
+        project: ['tsconfig.json'],
+      },
+      node: {
+        project: ['tsconfig.json'],
+      },
+    },
+  },
 };

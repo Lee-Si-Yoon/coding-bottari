@@ -7,10 +7,6 @@ module.exports = {
   overrides: [
     {
       files: ['src/**/*.ts', 'src/**/*.tsx'],
-      parserOptions: {
-        project,
-        ecmaVersion: 'latest',
-      },
       extends: [
         require.resolve('@vercel/style-guide/eslint/typescript'),
         require.resolve('@vercel/style-guide/eslint/browser'),
