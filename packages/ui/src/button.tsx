@@ -1,3 +1,5 @@
+import React from 'react';
+
 export function CustomButton(props: {
   children?: React.ReactNode;
   onClick?: VoidFunction;

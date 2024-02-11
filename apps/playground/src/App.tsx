@@ -1,10 +1,12 @@
+import React from 'react';
 import { CustomButton } from '@bottari/ui';
 import './App.css';
 
-function App(): JSX.Element {
+function App(): React.ReactNode {
   return (
     <CustomButton
       onClick={() => {
+        // eslint-disable-next-line no-alert -- for test
         window.alert('clicked');
       }}
     >

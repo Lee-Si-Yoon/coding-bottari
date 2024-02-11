@@ -1,6 +1,6 @@
+import React from 'react';
 import { CustomButton } from '@bottari/ui';
 import './App.css';
-import React from 'react';
 
 function App(): React.ReactNode {
   return (
