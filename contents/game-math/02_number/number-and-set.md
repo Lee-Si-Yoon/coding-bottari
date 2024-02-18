@@ -40,28 +40,28 @@
 
    순서에 관계없이 동일한 결과가 나온다.
 
-   $$
+   $
    a + b = b + a\\
    a \times b = b \times a
-   $$
+   $
 
 2. 결합법칙 associative law
 
    연산이 두 번 이상 연속될 때, 앞의 연산을 먼저 계산한 결과와 뒤의 연산을 계산한 결과가 같다.
 
-   $$
+   $
    (a + b) + c = a + (b + c)\\
    (a \times b) \times c = a \times (b \times c)
-   $$
+   $
 
 3. 분배법칙 distributive law
 
    서로 다른 2가지 연산에 대해 다음의 규칙(좌분배, 우분배법칙)이 성립하는 것.
 
-   $$
+   $
    a \times (b + c) = a \times b + a \times c \\
    (b + c) \times a = b \times a + c \times a
-   $$
+   $
 
 ### 항등원 Identity
 
