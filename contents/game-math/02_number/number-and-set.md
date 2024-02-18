@@ -40,10 +40,10 @@
 
    순서에 관계없이 동일한 결과가 나온다.
 
-   $
+   ```math
    a + b = b + a\\
    a \times b = b \times a
-   $
+   ```
 
 2. 결합법칙 associative law
 
