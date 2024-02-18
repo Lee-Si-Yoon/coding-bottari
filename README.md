@@ -4,7 +4,4 @@
 [ref monrepo](https://github.com/NiGhTTraX/ts-monorepo/blob/master/README.md)
 [commitlint](https://commitlint.js.org/)
 [doctoc](https://github.com/thlorenz/doctoc)
-
-## TODOs
-
-- [ ] clean up and normalize eslint
+[mathjax syntax](https://www.onemathematicalcat.org/MathJaxDocumentation/TeXSyntax.htm)
