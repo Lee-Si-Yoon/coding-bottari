@@ -12,7 +12,7 @@ class ListNode<T> {
   }
 }
 
-class LinkedList<T> {
+export class LinkedList<T> {
   head: ListNode<T> | null | undefined;
   size = 0;
 
@@ -121,16 +121,3 @@ class LinkedList<T> {
     }
   }
 }
-
-const linkedList = new LinkedList();
-
-linkedList.insertFirst(100);
-linkedList.insertFirst(200);
-linkedList.insertFirst(300);
-linkedList.insertLast(400);
-linkedList.insertAt(500, 1);
-
-linkedList.printListData();
-
-// const secondItem = linkedList.getAt(2);
-// console.log(secondItem);
