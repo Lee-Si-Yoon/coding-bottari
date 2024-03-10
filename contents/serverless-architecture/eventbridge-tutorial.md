@@ -1,5 +1,15 @@
 # Eventbridge
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [디스코드 날씨 알림 봇](#%EB%94%94%EC%8A%A4%EC%BD%94%EB%93%9C-%EB%82%A0%EC%94%A8-%EC%95%8C%EB%A6%BC-%EB%B4%87)
+  - [Lambda 함수 생성](#lambda-%ED%95%A8%EC%88%98-%EC%83%9D%EC%84%B1)
+  - [Discord 채널 설정](#discord-%EC%B1%84%EB%84%90-%EC%84%A4%EC%A0%95)
+  - [Eventbridge 설정](#eventbridge-%EC%84%A4%EC%A0%95)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 lambda 함수의 트리거를 마음대로 설정할 수 있는 것. cron job을 돌릴 수도 있다.
 
 ## 디스코드 날씨 알림 봇

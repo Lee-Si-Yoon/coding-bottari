@@ -1,5 +1,14 @@
 # 시간 복잡도
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [코테를 위한 시간 복잡도](#%EC%BD%94%ED%85%8C%EB%A5%BC-%EC%9C%84%ED%95%9C-%EC%8B%9C%EA%B0%84-%EB%B3%B5%EC%9E%A1%EB%8F%84)
+  - [문제 이해하기](#%EB%AC%B8%EC%A0%9C-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0)
+- [시간 복잡도를 위한 지수와 로그](#%EC%8B%9C%EA%B0%84-%EB%B3%B5%EC%9E%A1%EB%8F%84%EB%A5%BC-%EC%9C%84%ED%95%9C-%EC%A7%80%EC%88%98%EC%99%80-%EB%A1%9C%EA%B7%B8)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 알고리즘 = 문제해결 방법
 
 하지만 내가 고안한 문제해결방법이 얼마나 걸릴까? 그 방법은 그대로 둔채 문제상황을 늘리면(e.g. 공 5개 정렬을 500개 정렬로) 내 방법이 너무 오래 걸리진 않을까

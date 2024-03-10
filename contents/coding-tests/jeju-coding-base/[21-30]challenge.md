@@ -1,5 +1,22 @@
 # 21 ~ 30
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [21. 팩토리얼](#21-%ED%8C%A9%ED%86%A0%EB%A6%AC%EC%96%BC)
+- [22. k의 개수](#22-k%EC%9D%98-%EA%B0%9C%EC%88%98)
+- [23. 가까운 수](#23-%EA%B0%80%EA%B9%8C%EC%9A%B4-%EC%88%98)
+- [24. 한 번만 등장한 문자](#24-%ED%95%9C-%EB%B2%88%EB%A7%8C-%EB%93%B1%EC%9E%A5%ED%95%9C-%EB%AC%B8%EC%9E%90)
+- [25. 잘라서 배열로 저장하기](#25-%EC%9E%98%EB%9D%BC%EC%84%9C-%EB%B0%B0%EC%97%B4%EB%A1%9C-%EC%A0%80%EC%9E%A5%ED%95%98%EA%B8%B0)
+  - [Regex Quantifiers](#regex-quantifiers)
+- [26. 진료순서 정하기](#26-%EC%A7%84%EB%A3%8C%EC%88%9C%EC%84%9C-%EC%A0%95%ED%95%98%EA%B8%B0)
+- [27. 영어가 싫어요](#27-%EC%98%81%EC%96%B4%EA%B0%80-%EC%8B%AB%EC%96%B4%EC%9A%94)
+- [28. 외계어 사전](#28-%EC%99%B8%EA%B3%84%EC%96%B4-%EC%82%AC%EC%A0%84)
+- [29. 문자열 밀기](#29-%EB%AC%B8%EC%9E%90%EC%97%B4-%EB%B0%80%EA%B8%B0)
+- [30. 컨트롤 제트](#30-%EC%BB%A8%ED%8A%B8%EB%A1%A4-%EC%A0%9C%ED%8A%B8)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## 21. 팩토리얼
 
 ```bash
@@ -111,8 +128,8 @@ function solution(array, n) {
 function solution2(array, n) {
   array.sort((a, b) => a - b);
 
-  const index = Math.min(...array.map(a => Math.abs(n - a)));
-  return array.find(a => Math.abs(n - a) === index);
+  const index = Math.min(...array.map((a) => Math.abs(n - a)));
+  return array.find((a) => Math.abs(n - a) === index);
 }
 ```
 
@@ -137,7 +154,7 @@ function solution(s) {
   return (
     Array.from(s)
       // split 했을때 한번만 나누면 length는 무조건 2
-      .filter(v => s.split(v).length == 2)
+      .filter((v) => s.split(v).length == 2)
       .sort()
       .join('')
   );
@@ -145,7 +162,7 @@ function solution(s) {
 
 function solution2(s) {
   return Array.from(s)
-    .filter(v => s.match(new RegExp(v, 'g')).length == 1)
+    .filter((v) => s.match(new RegExp(v, 'g')).length == 1)
     .sort()
     .join('');
 }
@@ -197,12 +214,12 @@ function solution2(my_str, n) {
 ```js
 function solution(emergency) {
   let order = emergency.slice().sort((a, b) => b - a);
-  return emergency.map(v => order.indexOf(v) + 1);
+  return emergency.map((v) => order.indexOf(v) + 1);
 }
 
 function solution2(emergency) {
   let order = [...emergency].sort((a, b) => b - a);
-  return emergency.map(v => order.indexOf(v) + 1);
+  return emergency.map((v) => order.indexOf(v) + 1);
 }
 ```
 
@@ -238,7 +255,7 @@ function solution(numbers) {
 
   return +numbers.replace(
     /zero|one|two|three|four|five|six|seven|eight|nine/g,
-    v => obj[v],
+    (v) => obj[v],
   );
 }
 
@@ -277,7 +294,7 @@ PROGRAMMERS-962 행성에 불시착한 우주비행사 머쓱이는 외계행성
 ```js
 function solution(spell, dic) {
   return dic.some(
-    v => [...v].sort().toString() === [...spell].sort().toString(),
+    (v) => [...v].sort().toString() === [...spell].sort().toString(),
   )
     ? 1
     : 2;

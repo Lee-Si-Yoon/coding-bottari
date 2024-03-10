@@ -1,5 +1,18 @@
 # CRUD하기 입문
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [HTTP API편](#http-api%ED%8E%B8)
+  - [DynamoDB](#dynamodb)
+  - [Lambda functions](#lambda-functions)
+  - [API gateway - HTTP](#api-gateway---http)
+  - [CORS 대응](#cors-%EB%8C%80%EC%9D%91)
+  - [정리](#%EC%A0%95%EB%A6%AC)
+- [REST API편](#rest-api%ED%8E%B8)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## HTTP API편
 
 [안내서](https://docs.aws.amazon.com/ko_kr/apigateway/latest/developerguide/http-api-dynamo-db.html)

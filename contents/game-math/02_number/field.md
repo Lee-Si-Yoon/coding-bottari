@@ -1,5 +1,16 @@
 # 수의 구조와 표현
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [체 공리 Field Axiom](#%EC%B2%B4-%EA%B3%B5%EB%A6%AC-field-axiom)
+  - [덧셈 연산에 대해](#%EB%8D%A7%EC%85%88-%EC%97%B0%EC%82%B0%EC%97%90-%EB%8C%80%ED%95%B4)
+  - [곱셈 연산에 대해](#%EA%B3%B1%EC%85%88-%EC%97%B0%EC%82%B0%EC%97%90-%EB%8C%80%ED%95%B4)
+  - [덧셈과 곱셈 연산에 대해](#%EB%8D%A7%EC%85%88%EA%B3%BC-%EA%B3%B1%EC%85%88-%EC%97%B0%EC%82%B0%EC%97%90-%EB%8C%80%ED%95%B4)
+- [수의 표현](#%EC%88%98%EC%9D%98-%ED%91%9C%ED%98%84)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 체Field($F$)의 구조를 만족하는 수집합은 유리수($Q$)와 실수($R$)이 있다.
 이들은 특별한 예외상황 없이 덧셈과 곱셈을 안전하고 자유롭게 사용할 수 있다.
 

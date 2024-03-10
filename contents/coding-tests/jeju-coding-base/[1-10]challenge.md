@@ -1,5 +1,24 @@
 # 1 ~ 10
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [01. 몫 구하기](#01-%EB%AA%AB-%EA%B5%AC%ED%95%98%EA%B8%B0)
+  - [double tilde(bitwise NOT)](#double-tildebitwise-not)
+- [01-2. 숫자 비교하기](#01-2-%EC%88%AB%EC%9E%90-%EB%B9%84%EA%B5%90%ED%95%98%EA%B8%B0)
+- [02. 나이 출력](#02-%EB%82%98%EC%9D%B4-%EC%B6%9C%EB%A0%A5)
+- [03. 각도기](#03-%EA%B0%81%EB%8F%84%EA%B8%B0)
+- [04. 양꼬치](#04-%EC%96%91%EA%BC%AC%EC%B9%98)
+- [05. 짝수의 합](#05-%EC%A7%9D%EC%88%98%EC%9D%98-%ED%95%A9)
+  - [reduce에 대한 글들](#reduce%EC%97%90-%EB%8C%80%ED%95%9C-%EA%B8%80%EB%93%A4)
+- [06. 배열의 평균값](#06-%EB%B0%B0%EC%97%B4%EC%9D%98-%ED%8F%89%EA%B7%A0%EA%B0%92)
+- [07. 머쓱이보다 키 큰 사람](#07-%EB%A8%B8%EC%93%B1%EC%9D%B4%EB%B3%B4%EB%8B%A4-%ED%82%A4-%ED%81%B0-%EC%82%AC%EB%9E%8C)
+- [08. 중복된 숫자 개수](#08-%EC%A4%91%EB%B3%B5%EB%90%9C-%EC%88%AB%EC%9E%90-%EA%B0%9C%EC%88%98)
+- [09. 피자 나눠 먹기(1)](#09-%ED%94%BC%EC%9E%90-%EB%82%98%EB%88%A0-%EB%A8%B9%EA%B8%B01)
+- [10. 짝수 홀수 개수](#10-%EC%A7%9D%EC%88%98-%ED%99%80%EC%88%98-%EA%B0%9C%EC%88%98)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## 01. 몫 구하기
 
 ```bash
@@ -132,7 +151,7 @@ function solution(n) {
   return Array(n)
     .fill()
     .map((_, i) => i + 1)
-    .filter(v => v % 2 === 0)
+    .filter((v) => v % 2 === 0)
     .reduce((a, c) => a + c, 0);
 }
 ```
@@ -187,7 +206,7 @@ function solution(numbers) {
 
 ```js
 function solution(array, height) {
-  return array.filter(v => v > height).length;
+  return array.filter((v) => v > height).length;
 }
 ```
 
@@ -206,7 +225,7 @@ function solution(array, height) {
 
 ```js
 function solution(array, n) {
-  return array.filter(v => v === n).length;
+  return array.filter((v) => v === n).length;
 }
 ```
 

@@ -1,5 +1,19 @@
 # 수와 집합
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [이항연산](#%EC%9D%B4%ED%95%AD%EC%97%B0%EC%82%B0)
+  - [닫혀있음 Clousre](#%EB%8B%AB%ED%98%80%EC%9E%88%EC%9D%8C-clousre)
+  - [교환, 결합, 분배 법칙](#%EA%B5%90%ED%99%98-%EA%B2%B0%ED%95%A9-%EB%B6%84%EB%B0%B0-%EB%B2%95%EC%B9%99)
+    - [교환법칙 communtative law](#%EA%B5%90%ED%99%98%EB%B2%95%EC%B9%99-communtative-law)
+    - [결합법칙 associative law](#%EA%B2%B0%ED%95%A9%EB%B2%95%EC%B9%99-associative-law)
+    - [분배법칙 distributive law](#%EB%B6%84%EB%B0%B0%EB%B2%95%EC%B9%99-distributive-law)
+  - [항등원 Identity](#%ED%95%AD%EB%93%B1%EC%9B%90-identity)
+  - [역원 Inverse](#%EC%97%AD%EC%9B%90-inverse)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 집합Set이라는 개념으로 수를 이해하는 것, 집합은 서로 구분되는 원소로 구성된 묶음을 의미하고 이러한 집합론을 소박한 집합론Naive set theory라고 한다
 
 | 분류                     | 정의                                                                                                                                   | 기호 |

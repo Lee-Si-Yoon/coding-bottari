@@ -1,5 +1,19 @@
 # 진법
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [10진수 Decimal](#10%EC%A7%84%EC%88%98-decimal)
+- [2진수 Bianry](#2%EC%A7%84%EC%88%98-bianry)
+- [8진수 Octal](#8%EC%A7%84%EC%88%98-octal)
+- [16진수 Hexadecimal](#16%EC%A7%84%EC%88%98-hexadecimal)
+- [10진수를 다른 진수로 변환하기](#10%EC%A7%84%EC%88%98%EB%A5%BC-%EB%8B%A4%EB%A5%B8-%EC%A7%84%EC%88%98%EB%A1%9C-%EB%B3%80%ED%99%98%ED%95%98%EA%B8%B0)
+  - [10진수 -> 2진수](#10%EC%A7%84%EC%88%98---2%EC%A7%84%EC%88%98)
+  - [10진수 -> 8진수](#10%EC%A7%84%EC%88%98---8%EC%A7%84%EC%88%98)
+  - [10진수 -> 16진수](#10%EC%A7%84%EC%88%98---16%EC%A7%84%EC%88%98)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 base또는 N $\cdot$ radix라고 부른다. 수Digit을 표현하는 기수체계(한자리를 나타낼 수 있는 수의 개수)
 
 ## 10진수 Decimal

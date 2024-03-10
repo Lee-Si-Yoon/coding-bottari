@@ -1,5 +1,12 @@
 # 빛 좋은 개살구 - 선언형 프로그래밍?
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [빛 좋은 개살구 - 선언형 프로그래밍?](#%EB%B9%9B-%EC%A2%8B%EC%9D%80-%EA%B0%9C%EC%82%B4%EA%B5%AC---%EC%84%A0%EC%96%B8%ED%98%95-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 선언형 vs 명령형 프로그래밍이라고 검색을 해보면, 명령형은 무엇을 어떻게, 즉 **HOW**이고 선언형은 무엇을 할 것 즉 **WHAT**에 관한 것이라고 많이 나온다. 하지만 선언형이라고 많이 언급되는 `Array.prototype.map()`이나 `Array.prototype.filter()`같은 메서드들도 까보면 안에는 명령형으로 써져 있는데 그러면 선언형 프로그래밍이라는 말은 언제 성립이 되는지 궁금해졌다.
 
 - 명령형으로 작성된 걸(아직 덜 추상화된 걸) 사용할 때 무엇을 해결할지에 집중하면 선언형 프로그래밍인가? 결국 최상단, 모든 기능들을 소비하는 단계를 선언형이라고 하는게 아닌지 - 결과론에 대한 이야기가 아닌가?

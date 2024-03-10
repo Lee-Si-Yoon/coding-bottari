@@ -1,5 +1,15 @@
 # Monoid 모노이드 조각글 모음
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [By Playframework](#by-playframework)
+- [By The Man](#by-the-man)
+- [By lionhairdino](#by-lionhairdino)
+  - [반군semigroup과 차이](#%EB%B0%98%EA%B5%B0semigroup%EA%B3%BC-%EC%B0%A8%EC%9D%B4)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 함수형 프로그래밍에 입문하면서 여기만큼 각자 설명하고 있는게 조금씩 달라서
 뭐가 진짜인지 알기 힘들기에, 각 글들의 중요부분을 모아보고 정리한 글입니다
 

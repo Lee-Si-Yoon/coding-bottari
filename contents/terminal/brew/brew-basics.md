@@ -1,5 +1,13 @@
 # Brew 기초
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [용어들](#%EC%9A%A9%EC%96%B4%EB%93%A4)
+- [기능들](#%EA%B8%B0%EB%8A%A5%EB%93%A4)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## 용어들
 
 [homebrew 용어집](https://docs.brew.sh/Manpage)

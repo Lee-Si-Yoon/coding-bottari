@@ -1,5 +1,16 @@
 # 31 ~ 35
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [31. 등수 매기기](#31-%EB%93%B1%EC%88%98-%EB%A7%A4%EA%B8%B0%EA%B8%B0)
+- [32. 저주의 숫자 3](#32-%EC%A0%80%EC%A3%BC%EC%9D%98-%EC%88%AB%EC%9E%90-3)
+- [33. 다항식 더하기](#33-%EB%8B%A4%ED%95%AD%EC%8B%9D-%EB%8D%94%ED%95%98%EA%B8%B0)
+- [34. 안전지대](#34-%EC%95%88%EC%A0%84%EC%A7%80%EB%8C%80)
+- [35. 겹치는 선분의 길이](#35-%EA%B2%B9%EC%B9%98%EB%8A%94-%EC%84%A0%EB%B6%84%EC%9D%98-%EA%B8%B8%EC%9D%B4)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## 31. 등수 매기기
 
 ```bash
@@ -13,10 +24,10 @@
 
 ```js
 function solution(score) {
-  let sum = score.map(v => v[0] + v[1]);
+  let sum = score.map((v) => v[0] + v[1]);
   let sorted = [...sum].sort((a, b) => b - a);
 
-  return sum.map(v => sorted.indexOf(v) + 1);
+  return sum.map((v) => sorted.indexOf(v) + 1);
 }
 ```
 
@@ -76,11 +87,11 @@ function solution(n) {
 function solution(polynomial) {
   const arry = polynomial.split(' + ');
   const xS = arry
-    .filter(v => v.includes('x'))
-    .map(v => +v.replace('x', '') || 1);
+    .filter((v) => v.includes('x'))
+    .map((v) => +v.replace('x', '') || 1);
   const xSum = xS.length > 0 ? xS.reduce((a, c) => a + c) : 0;
   const others = arry
-    .filter(v => !v.includes('x'))
+    .filter((v) => !v.includes('x'))
     .reduce((a, c) => a + parseInt(c), 0);
 
   const answer = [];
@@ -158,7 +169,7 @@ function solution(board) {
     for (let j = 0; j < n; j++) {
       // 지뢰인 경우
       if (board[i][j] === 1) {
-        d.forEach(v => {
+        d.forEach((v) => {
           let [col, row] = [i + v[0], j + v[1]];
           if (col >= 0 && col < n && row >= 0 && row < n) {
             // 중복을 원치 않는 경우 그냥 set에다 add 박아버리는 게 편함
@@ -174,7 +185,7 @@ function solution(board) {
 ```
 
 ```js
-d.forEach(v => {
+d.forEach((v) => {
   let [col, row] = [i + v[0], j + v[1]];
   if (col >= 0 && col < n && row >= 0 && row < n) {
     dangerZone.add(col + ' ' + row);
@@ -252,6 +263,6 @@ function solution(lines) {
     }
   });
 
-  return line.filter(v => v > 1).length;
+  return line.filter((v) => v > 1).length;
 }
 ```

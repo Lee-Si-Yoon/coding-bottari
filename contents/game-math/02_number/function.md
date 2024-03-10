@@ -1,5 +1,12 @@
 # 함수
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [함수](#%ED%95%A8%EC%88%98)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 상자 함, 이 상자를 통과하는 과정
 첫번째 집합의 모든 원소가 빠짐없이 두번째 집합의 어떤 원소에 대응되는 관계
 

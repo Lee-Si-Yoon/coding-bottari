@@ -1,5 +1,15 @@
 # Data structure
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [데이터 저장방식](#%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A0%80%EC%9E%A5%EB%B0%A9%EC%8B%9D)
+  - [Int type](#int-type)
+  - [char type](#char-type)
+  - [list type](#list-type)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 메모리에는 크게 2가지, 하드디스크(SSD, HDD)와 RAM메모리. 코드 파일을 작성하고 저장해두면 하드디스크에 그리고 해당 파일을 실행하면 RAM메모리에 올라가게 됨. 이 RAM메모리를 낭비없이 잘 쓰기 위한 자료구조다.
 
 RAM메모리에는 전기신호를 저장할 수 있는 트랜지스터라는 작은 부품들이 있음. ON이면 1 OFF면 0을 나타냄 이를 이용해서 이진수Binary digit을 표현할 수 있게 됨. Binary digit을 줄여서 bit라고 부름.
@@ -13,6 +23,8 @@ RAM메모리에는 전기신호를 저장할 수 있는 트랜지스터라는 �
 이 넓은 데이터 공간에서 컴퓨터가 해당 데이터를 찾으려면 주소값이 필요해짐. 하나하나의 데이터마다 주소값이 있음.
 
 ## 데이터 저장방식
+
+### Int type
 
 c언어에서 int는 4byte를 가짐.
 
@@ -34,6 +46,8 @@ int price = 290000000;
 
 10진수는 데이터 경계를 구분할 수 없음
 
+### char type
+
 문자는 어떻게 저장이 될까. 컴퓨터는 숫자밖에 저장이 안되는데 ASCIIcode 128자의 문자들을 숫자와 매칭시켜둠
 c언어에서 char는 1byte를 가짐.
 
@@ -42,6 +56,8 @@ char ascii = 'A';
 ```
 
 0100 0001(0x41) = 65 = A
+
+### list type
 
 리스트는 어떻게 저장이 될까.
 

@@ -1,5 +1,12 @@
 # brew로 nvm설치 후 해줄 일들
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [brew로 nvm설치 후 해줄 일들](#brew%EB%A1%9C-nvm%EC%84%A4%EC%B9%98-%ED%9B%84-%ED%95%B4%EC%A4%84-%EC%9D%BC%EB%93%A4)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ```zsh
 brew install nvm
 

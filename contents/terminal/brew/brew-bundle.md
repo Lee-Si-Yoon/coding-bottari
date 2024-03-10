@@ -1,5 +1,12 @@
 # Brew로 개발환경 세팅하기
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [Ref](#ref)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 우선적으로 할건 다운로드 받을 패키지들 명세 만들기
 
 ```zsh

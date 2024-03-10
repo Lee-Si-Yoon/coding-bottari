@@ -1,5 +1,17 @@
 # Functor 펑터 조각글 모음
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [By](#by)
+- [By Playframework](#by-playframework)
+- [By Evan-moon](#by-evan-moon)
+- [By The Man](#by-the-man)
+- [By lionhairdino](#by-lionhairdino)
+- [By Karl Saehun Chung](#by-karl-saehun-chung)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 함수형 프로그래밍에 입문하면서 여기만큼 각자 설명하고 있는게 조금씩 달라서
 뭐가 진짜인지 알기 힘들기에, 각 글들의 중요부분을 모아보고 정리한 글입니다
 
@@ -28,7 +40,7 @@ map은 내부의 요소들만 수정하며, 타입을 변경하지는 않는다.
 항등 함수를 적용한다면 자기 자신이며 아래와 같은 수식 만족한다
 
 ```js
-x.map(a => a) == x;
+x.map((a) => a) == x;
 ```
 
 펑터는 map함수만으로도 추가적인 유용한 연산들을 정의 가능해짐
@@ -54,13 +66,13 @@ x --f--> y           F(x)--F(f)-->F(y)
 ```js
 const 대상x = 1;
 const 대상y = 2;
-const 사상f = x => x + 1;
+const 사상f = (x) => x + 1;
 
 사상f(대상x) === 대상y; // true
 
 const 대상x_2 = 펑터(1);
 const 대상y_2 = 펑터(2);
-const 사상f_2 = 펑터(x => x + 1);
+const 사상f_2 = 펑터((x) => x + 1);
 
 사상f_2(대상x_2) === 대상y_2; // true
 ```
@@ -73,7 +85,7 @@ const 사상f_2 = 펑터(x => x + 1);
 const array: Array<number> = [1, 2, 3];
 
 // 트랜스폼 함수: (x: number) => string
-const toString = v => v.toString();
+const toString = (v) => v.toString();
 
 // 매핑!
 array.map(toString);
@@ -140,9 +152,9 @@ functoriality
 일반 함수로 구현할 수도 있다.
 
 ```js
-const Functor = value => ({
+const Functor = (value) => ({
   value,
-  map: fn => Functor(fn(v)),
+  map: (fn) => Functor(fn(v)),
 });
 ```
 

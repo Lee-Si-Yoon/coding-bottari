@@ -1,5 +1,19 @@
 # 하루만에 배우는 aws 서버리스 아키텍쳐
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [서버리스 아키텍쳐의 이점](#%EC%84%9C%EB%B2%84%EB%A6%AC%EC%8A%A4-%EC%95%84%ED%82%A4%ED%85%8D%EC%B3%90%EC%9D%98-%EC%9D%B4%EC%A0%90)
+- [서버리스 아키텍쳐의 개요](#%EC%84%9C%EB%B2%84%EB%A6%AC%EC%8A%A4-%EC%95%84%ED%82%A4%ED%85%8D%EC%B3%90%EC%9D%98-%EA%B0%9C%EC%9A%94)
+- [AWS 계정 설정](#aws-%EA%B3%84%EC%A0%95-%EC%84%A4%EC%A0%95)
+  - [루트 계정](#%EB%A3%A8%ED%8A%B8-%EA%B3%84%EC%A0%95)
+  - [IAM 계정](#iam-%EA%B3%84%EC%A0%95)
+- [AWS API Gateway 종류](#aws-api-gateway-%EC%A2%85%EB%A5%98)
+  - [RESTful API](#restful-api)
+  - [WEBSOCKET API](#websocket-api)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 서버를 프로비저닝하거나 관리하지 않아도 되는 클라우드 컴퓨팅 모델
 
 TODO: 프로비저닝, 컴퓨팅 모델 찾아보기

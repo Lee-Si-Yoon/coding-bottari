@@ -1,5 +1,16 @@
 # List
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [Array list](#array-list)
+  - [Static array](#static-array)
+  - [Dynamic array](#dynamic-array)
+  - [시간복잡도](#%EC%8B%9C%EA%B0%84%EB%B3%B5%EC%9E%A1%EB%8F%84)
+- [Linked list](#linked-list)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 Set과 다른 것은 Set은 순서를 저장하지 않음. List는 순서도 저장함. `[1,2,3]`와 `[3,2,1]`은 서로 다른 리스트. Set은 `set([1,2,3])`과 `set([3,2,1])`은 같은 Set.
 
 ## Array list

@@ -1,5 +1,15 @@
 # zsh 꾸미기
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [설치 파일들](#%EC%84%A4%EC%B9%98-%ED%8C%8C%EC%9D%BC%EB%93%A4)
+- [iterm2 설정들](#iterm2-%EC%84%A4%EC%A0%95%EB%93%A4)
+- [zsh 플러그인들](#zsh-%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8%EB%93%A4)
+- [Ref](#ref)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## 설치 파일들
 
 ```zsh
