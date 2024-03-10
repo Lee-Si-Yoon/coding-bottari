@@ -80,14 +80,18 @@ nums의 원소 중 두 숫자를 더해서 target이 될 수 있으면 true, 없
 
 $$
 \begin{matrix}
-2^{10} = 1024 = 10^3 \\
-2^{20} = 1024 \cdot 1024 = 10^3 \cdot 10^3 = 10^6
+2^{10} = 1024 \approx 10^3 \\
+10^3 = 1024 \approx 2^{10} \\
+\notag \\
+2^{20} = 1024 \cdot 1024 \approx 10^3 \cdot 10^3 = 10^6 \\
 \end{matrix}
 $$
 
+간단히 10은 $2^{3.33...}$, 2는 $10^{0.33...}$라고 때려맞춰 계산해보면
+
 $$
 \begin{matrix}
-\log_2 \cdot 1000 = \log_2 \cdot 1024 = \log_2 \cdot 2^{10} = 10  \\
+\log_2 \cdot 10^3 \approx \log_2 \cdot 1024 = \log_2 \cdot 2^{10} = 10  \\
 \end{matrix}
 $$
 
@@ -95,8 +99,8 @@ $$
 
 $$
 \begin{gather}
-O(n) = 10^8 \tag{시간초과} \\
-O(log_2 \cdot n) = 27 \tag{엄청여유} \\
+O(10^8) = 10^8 \tag{시간초과} \\
+O(log_2 \cdot 10^8) \approx O(log_2 \cdot 2^{26.64}) = 27 \tag{엄청여유} \\
 \end{gather}
 $$
 
@@ -104,9 +108,9 @@ $n = 10^6$일 때는
 
 $$
 \begin{gather}
-O(n^2) = 10^{12} \tag{시간초과} \\
-O(n \cdot log_2 \cdot n) = 10^6 \cdot 20 \tag{통과} \\
-O(n) = 10^6 \tag{통과} \\
-O(log_2 \cdot n) = 20 \tag{엄청여유}
+O(10^{6 \cdot 2}) = 10^{6 \cdot 2} \tag{시간초과} \\
+O(10^6 \cdot log_2 \cdot 10^6) \approx O(10^6 \cdot log_2 \cdot 2^{19.98}) = 10^6 \cdot 20 \tag{통과} \\
+O(10^6) = 10^6 \tag{통과} \\
+O(log_2 \cdot 10^6) \approx O(log_2 \cdot 2^{19.98})  = 20 \tag{엄청여유}
 \end{gather}
 $$

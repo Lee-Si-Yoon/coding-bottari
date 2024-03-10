@@ -120,7 +120,7 @@ $$
 2 = 8 \times 0 + 2 \notag \\
 \text{191} = \text{8진수로 277} \\
 \notag \\
-2 = 010 = 0 \times 2^2 + 1 \times 2^1 + 0 \times 2^0 \notag \\
+0 \times 2^2 + 1 \times 2^1 + 0 \times 2^0 \notag = 2 = 010 \\
 7 = 111 \notag \\
 7 = 111 \notag \\
 \text{277(8)} = \text{2진수로 010111111} \\
