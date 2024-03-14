@@ -14,7 +14,6 @@
   "scripts": {
     "build": "pnpm lerna run build",
     "clean": "pnpm lerna run clean",
-    "docs": "doctoc --title '**Table of content**' README.md",
     "doctoc": "doctoc ./contents --github --notitle",
     "lint": "pnpm lerna run lint",
     "pretty": "npx prettier --write ."
