@@ -123,3 +123,5 @@ O(10^6) = 10^6 \tag{통과} \\
 O(log_2 \cdot 10^6) \approx O(log_2 \cdot 2^{19.98})  = 20 \tag{엄청여유}
 \end{gather}
 $$
+
+[지수법칙](https://blog.naver.com/galaxyenergy/222525576510)

@@ -48,11 +48,22 @@ export class LinkedList<T> implements LinkedListInterface<T> {
     if (node) return node.value;
   };
 
-  // O(1)
-  insertFront(value: T): void {
-    this.head = { value, next: this.head };
-    this._size += 1;
-  }
+  // O(n)
+  print: VoidFunction = () => {
+    let current = this.head;
+    let output = '';
+
+    while (current) {
+      output += String(current.value);
+      current = current.next;
+      if (current) {
+        output += '>';
+      }
+    }
+
+    // eslint-disable-next-line no-console --- print function
+    console.log(output);
+  };
 
   // O(n)
   insert(index: number, value: T): void {
@@ -70,6 +81,12 @@ export class LinkedList<T> implements LinkedListInterface<T> {
     }
   }
 
+  // O(1)
+  insertFront(value: T): void {
+    this.head = { value, next: this.head };
+    this._size += 1;
+  }
+
   // O(n)
   insertBack(value: T): void {
     if (this._size === 0) {
@@ -82,29 +99,6 @@ export class LinkedList<T> implements LinkedListInterface<T> {
       lastNode.next = { value };
       this._size += 1;
     }
-  }
-
-  // O(n)
-  removeBack(): void {
-    if (this._size === 0) {
-      return;
-    }
-
-    const prevToLastNode = this.getNodeAtIndex(this._size - 2);
-    if (prevToLastNode) {
-      prevToLastNode.next = prevToLastNode.next?.next;
-      this._size -= 1;
-    }
-  }
-
-  // O(1)
-  removeFront(): void {
-    if (this._size === 0) {
-      return;
-    }
-
-    this.head = this.head?.next;
-    this._size -= 1;
   }
 
   // O(n)
@@ -125,20 +119,26 @@ export class LinkedList<T> implements LinkedListInterface<T> {
     this._size -= 1;
   };
 
-  // O(n)
-  print: VoidFunction = () => {
-    let current = this.head;
-    let output = '';
-
-    while (current) {
-      output += String(current.value);
-      current = current.next;
-      if (current) {
-        output += '>';
-      }
+  // O(1)
+  removeFront(): void {
+    if (this._size === 0) {
+      return;
     }
 
-    // eslint-disable-next-line no-console --- print function
-    console.log(output);
-  };
+    this.head = this.head?.next;
+    this._size -= 1;
+  }
+
+  // O(n)
+  removeBack(): void {
+    if (this._size === 0) {
+      return;
+    }
+
+    const prevToLastNode = this.getNodeAtIndex(this._size - 2);
+    if (prevToLastNode) {
+      prevToLastNode.next = prevToLastNode.next?.next;
+      this._size -= 1;
+    }
+  }
 }
