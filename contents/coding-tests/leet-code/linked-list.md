@@ -1,5 +1,13 @@
 # Linked list 문제들
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [Linked list 문제들](#linked-list-%EB%AC%B8%EC%A0%9C%EB%93%A4)
+  - [Design Browser History](#design-browser-history)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 1. linked list를 자유자재로 구현 가능해야함.
    선형 자료구조를 사용해야하고 중간에 데이터의 추가 삭제가 용이해야할 때
 2. Tree OR Graph에 활용.

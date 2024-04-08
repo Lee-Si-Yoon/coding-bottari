@@ -3,7 +3,9 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-- [Image upload](#image-upload)
+- [S3 직접 업로드 방식](#s3-%EC%A7%81%EC%A0%91-%EC%97%85%EB%A1%9C%EB%93%9C-%EB%B0%A9%EC%8B%9D)
+- [Lambda](#lambda)
+- [Form-data](#form-data)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
