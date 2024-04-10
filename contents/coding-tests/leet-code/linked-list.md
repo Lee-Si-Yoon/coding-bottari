@@ -3,8 +3,7 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-- [Linked list 문제들](#linked-list-%EB%AC%B8%EC%A0%9C%EB%93%A4)
-  - [Design Browser History](#design-browser-history)
+- [Design Browser History](#design-browser-history)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
