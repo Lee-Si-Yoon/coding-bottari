@@ -11,3 +11,17 @@
 [katex syntax](https://katex.org/docs/supported)
 
 [모듈러 산술](https://ko.wikipedia.org/wiki/%EB%AA%A8%EB%93%88%EB%9F%AC_%EC%82%B0%EC%88%A0)
+
+## Nx commands
+
+```bash
+npx nx show project <projectName> --web
+npx nx graph
+npx nx reset
+npx nx repair
+npx nx format
+```
+
+## TODOs
+
+1. pnpm + nx monorepo글 업데이트, project crystal 추가 이후 [nx.includedScripts](https://nx.dev/recipes/adopting-nx/adding-to-monorepo#installing-nx)

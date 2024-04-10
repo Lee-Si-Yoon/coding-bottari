@@ -11,10 +11,34 @@
     "build": "pnpm run clean && pnpm run compile",
     "clean": "rimraf ./dist",
     "compile": "tsc -p tsconfig.build.json",
-    "lint": "eslint . --config ./.eslintrc.cjs"
+    "lint": "nx lint --config ./.eslintrc.cjs"
   },
   "devDependencies": {
     "rimraf": "^5.0.5",
     "typescript": "^5.3.3"
+  },
+  "nx": {
+    "includedScripts": [
+      "clean",
+      "build"
+    ],
+    "targets": {
+      "build": {
+        "cache": true,
+        "inputs": [
+          "production",
+          "^production"
+        ],
+        "outputs": [
+          "{workspaceRoot}/dist"
+        ],
+        "dependsOn": [
+          "^build"
+        ],
+        "options": {
+          "cwd": "packages/structures"
+        }
+      }
+    }
   }
 }

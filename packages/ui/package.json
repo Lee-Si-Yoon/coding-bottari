@@ -2,10 +2,10 @@
   "name": "@bottari/ui",
   "version": "1.0.0",
   "scripts": {
-    "build": "pnpm run clean && pnpm run compile",
+    "build": "nx exec -- pnpm run clean && pnpm run compile",
     "clean": "rimraf ./dist",
     "compile": "tsc -p tsconfig.build.json",
-    "lint": "eslint . --config ./.eslintrc.cjs"
+    "lint": "nx lint --config ./.eslintrc.cjs"
   },
   "dependencies": {
     "@bottari/structures": "workspace:*"
@@ -18,5 +18,29 @@
   },
   "peerDependencies": {
     "react": "~18.2.0"
+  },
+  "nx": {
+    "includedScripts": [
+      "clean",
+      "build"
+    ],
+    "targets": {
+      "build": {
+        "cache": true,
+        "inputs": [
+          "production",
+          "^production"
+        ],
+        "outputs": [
+          "{workspaceRoot}/dist"
+        ],
+        "dependsOn": [
+          "^build"
+        ],
+        "options": {
+          "cwd": "packages/ui"
+        }
+      }
+    }
   }
 }

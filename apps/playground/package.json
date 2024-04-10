@@ -1,13 +1,13 @@
 {
-  "name": "@bottari/playground",
+  "name": "playground",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "build": "tsc && vite build",
-    "clean": "rimraf dist",
-    "dev": "vite",
-    "lint": "eslint . --config ./.eslintrc.cjs",
-    "preview": "vite preview"
+    "build": "nx exec -- tsc && vite build",
+    "clean": "nx exec -- rimraf dist",
+    "dev": "nx exec -- vite",
+    "lint": "nx lint --config ./.eslintrc.cjs",
+    "preview": "nx exec -- vite preview"
   },
   "dependencies": {
     "@bottari/ui": "workspace:*",
@@ -27,5 +27,37 @@
     "typescript": "^5.2.2",
     "vite": "^5.0.8",
     "vite-tsconfig-paths": "^4.3.1"
+  },
+  "nx": {
+    "includedScripts": [
+      "dev",
+      "clean",
+      "build",
+      "preview"
+    ],
+    "targets": {
+      "dev": {
+        "cache": false
+      },
+      "preview": {
+        "cache": false
+      },
+      "build": {
+        "cache": true,
+        "inputs": [
+          "production",
+          "^production"
+        ],
+        "outputs": [
+          "{workspaceRoot}/dist"
+        ],
+        "dependsOn": [
+          "^build"
+        ],
+        "options": {
+          "cwd": "apps/playground"
+        }
+      }
+    }
   }
 }

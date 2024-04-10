@@ -1,11 +1,10 @@
 {
   "extends": "./tsconfig.build.json",
-
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@bottari/ui/*": ["packages/ui/src/*"],
       "@bottari/*": ["packages/*/src"],
+      "@bottari/ui/*": ["packages/ui/src/*"],
     },
     "noEmit": true,
   },
