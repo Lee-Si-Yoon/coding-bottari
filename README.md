@@ -24,6 +24,5 @@ npx nx format
 
 ## TODOs
 
-1. pnpm + nx monorepo글 업데이트, project crystal 추가 이후 [nx.includedScripts](https://nx.dev/recipes/adopting-nx/adding-to-monorepo#installing-nx)
-2. module federation OR micro frontend로 각 앱 만들어서 한 앱에 합치기 - 각자 다른 프레임워크 및 버전도 가능해야 함
-3. ts & eslint + monorepo
+1. module federation OR micro frontend로 각 앱 만들어서 한 앱에 합치기 - 각자 다른 프레임워크 및 버전도 가능해야 함
+2. ts & eslint + monorepo

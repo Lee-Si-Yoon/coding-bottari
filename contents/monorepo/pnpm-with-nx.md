@@ -1,5 +1,7 @@
 # PNPM with Nx
 
+작성일 2024.04.11
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
@@ -188,3 +190,79 @@ nx의 다양한 generator에 의존하지 않고 nx의 장점을 골라먹을 �
 5. npx nx affected:graph를 실행시켜서 dependency tree를 확인해보면 master와 달라진 프로젝트들을 보여준다. 이 상태로 npx nx affected:build를 실행해보면 shared-ui는 playground에서 사용되고 있었기에 shared-ui와 playground만 build하는 것을 확인 할 수 있다.
    - HEAD와 master간 차이나는 부분을 알아서 찾아준다고 생각하면 된다
 6. 기존의 `pnpm run --parallel -r build`을 실행해보면 shared-ui, playground, noop 모두를 빌드하는 것과 대조적이다.
+
+---
+
+## Nx 18 버전 이후의 업데이트
+
+작성일 2024.04.12
+
+Nx에서 플러그인 사용자들을 늘리기 위해서인지는 모르겠지만... 플러그인을 사용하면 인풋 소스, 아웃풋, 의존성 등을 추론해서 사용자가 직접 nx.json을 열심히 작성하지 않아도 알아서 작성해주는 하는 project crystal이라는 기능을 출시했다. 그러면서 API가 바뀌었고 npm/yarn/pnpm workspace을 사용하는 경우 추가적으로 더 작성해줘야 할 것들이 늘어나게 되었다.
+
+1. nx를 18버전 이상으로 migrate 해준다.
+2. 예전엔 `pnpm add nx -D -w`으로 nx만 설치하면 됐지만, 이젠 `npx nx@latest init`을 해주면 각 패키지의 package.json이 업데이트 된다.
+
+   ```json
+   {
+    "name": "playground",
+    ...
+    "scripts" : {
+      ...
+    },
+    ...
+   }
+   ```
+
+   와 같은 형태로 되어 있었는데 nx init을 해주면 아래처럼 변한다
+
+   ```json
+   {
+    "name": "playground",
+    ...
+    "scripts" : {
+      ...
+    },
+    ...
+    "nx": {
+      "includedScripts": []
+    }
+   }
+   ```
+
+3. [`nx show`](https://nx.dev/nx-api/nx/documents/show#show)라는 커맨드가 추가되었는데 이를 통해서 해당 패키지에서 nx가 실행가능한 커맨드들과 부가정보들을 알려준다.
+   - `nx show project playground --web`을 실행해보면 [Steps - adding Nx](#steps---adding-nx)에선 가능했던 모든 커맨드들(build, dev)이 뜨지 않는 것을 확인할 수 있다.
+4. [`nx exec --`](https://nx.dev/recipes/running-tasks/root-level-scripts#keep-using-npm-to-run-scripts-rather-than-nx)라는 스크립트 명령어를 추가해주고 nx.includedScripts에 해당 명령어를 입력하면 nx를 통해서 실행이 가능해진다.
+
+   ```json
+   {
+    "name": "playground",
+    ...
+    "scripts" : {
+      "dev": "remix dev",
+      "build": "remix build",
+      ...
+    },
+    "nx": {
+      "includedScripts": []
+    }
+   }
+   ```
+
+   위를 아래와 같이 업데이트해주면 된다.
+
+   ```json
+   {
+    "name": "playground",
+    ...
+    "scripts" : {
+      "dev": "nx exec -- remix dev",
+      "build": "nx exec -- remix build",
+      ...
+    },
+    "nx": {
+      "includedScripts": ["dev", "build"]
+    }
+   }
+   ```
+
+5. 캐시 기준이 되는 인풋 소스는 [nx.json에서 전역으로 설정하거나 패키지 단위로 입력](https://nx.dev/recipes/running-tasks/configure-inputs)해주면 된다. 이 부분은 업데이트가 없다.
