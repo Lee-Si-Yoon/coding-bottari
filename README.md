@@ -26,3 +26,4 @@ npx nx format
 
 1. module federation OR micro frontend로 각 앱 만들어서 한 앱에 합치기 - 각자 다른 프레임워크 및 버전도 가능해야 함
 2. ts & eslint + monorepo
+3. reuse eslint config in monorepo [link](https://medium.com/reactbrasil/reuse-your-eslint-prettier-config-in-a-monorepo-with-lerna-54c1800cacdc)
