@@ -7,14 +7,11 @@ module.exports = {
   overrides: [
     {
       files: ['src/**/*.ts'],
-      extends: [
-        require.resolve('@vercel/style-guide/eslint/typescript'),
-        require.resolve('@vercel/style-guide/eslint/node'),
-      ],
+      rules: {},
     },
     {
       files: ['src/**/*.js'],
-      extends: [require.resolve('@vercel/style-guide/eslint/node')],
+      rules: {},
     },
   ],
 };
