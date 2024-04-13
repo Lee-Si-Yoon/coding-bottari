@@ -8,6 +8,7 @@
 - [Steps - PNPM monorepo](#steps---pnpm-monorepo)
 - [Steps - adding Nx](#steps---adding-nx)
 - [Nx affected](#nx-affected)
+- [Nx 18 버전 이후의 업데이트](#nx-18-%EB%B2%84%EC%A0%84-%EC%9D%B4%ED%9B%84%EC%9D%98-%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
