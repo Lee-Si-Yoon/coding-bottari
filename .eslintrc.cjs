@@ -6,26 +6,32 @@ const project = resolve(__dirname, 'tsconfig.json');
  * @type {import('eslint').Linter.Config}
  */
 module.exports = {
-  // parserOptions: {
-  //   project,
-  //   ecmaVersion: 'latest',
-  // },
-  // settings: {
-  //   'import/parsers': {
-  //     '@typescript-eslint/parser': ['.ts', '.tsx'],
-  //   },
-  //   'import/resolver': {
-  //     typescript: {
-  //       project: ['tsconfig.json'],
-  //     },
-  //     node: {
-  //       project: ['tsconfig.json'],
-  //     },
-  //   },
-  // },
   root: true,
   ignorePatterns: ['**/*'],
   plugins: ['@nx'],
+  extends: ['plugin:import/recommended'],
+  rules: {
+    'import/no-unresolved': 'off',
+    'import/order': [
+      'error',
+      {
+        groups: [
+          ['builtin', 'external'],
+          'internal',
+          ['parent', 'sibling'],
+          'index',
+        ],
+        'newlines-between': 'always',
+        pathGroups: [
+          {
+            pattern: '@/**',
+            group: 'internal',
+            position: 'after',
+          },
+        ],
+      },
+    ],
+  },
   overrides: [
     {
       files: ['*.ts', '*.tsx', '*.js', '*.jsx'],
