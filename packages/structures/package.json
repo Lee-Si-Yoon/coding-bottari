@@ -1,5 +1,5 @@
 {
-  "name": "@bottari/structures",
+  "name": "structures",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index",
@@ -11,16 +11,17 @@
     "build": "pnpm run clean && pnpm run compile",
     "clean": "rimraf ./dist",
     "compile": "tsc -p tsconfig.build.json",
+    "doctoc": "nx exec -- doctoc . --github --notitle",
     "lint": "nx lint --config ./.eslintrc.cjs"
   },
   "devDependencies": {
-    "rimraf": "^5.0.5",
     "typescript": "^5.3.3"
   },
   "nx": {
     "includedScripts": [
       "clean",
-      "build"
+      "build",
+      "doctoc"
     ],
     "targets": {
       "build": {

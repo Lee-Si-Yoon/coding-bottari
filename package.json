@@ -11,9 +11,7 @@
     "contents/*",
     "packages/*"
   ],
-  "scripts": {
-    "doctoc": "doctoc ./contents --github --notitle"
-  },
+  "scripts": {},
   "prettier": "@vercel/style-guide/prettier",
   "dependencies": {
     "ts-node": "^10.9.2"
@@ -27,6 +25,7 @@
     "eslint-plugin-import": "^2.29.1",
     "nx": "18.2.4",
     "prettier": "^3.2.1",
+    "rimraf": "^5.0.5",
     "typescript": "^5.3.3"
   }
 }

@@ -17,6 +17,9 @@
   "targetDefaults": {
     "clean": {
       "cache": false
+    },
+    "doctoc": {
+      "cache": false
     }
   }
 }
