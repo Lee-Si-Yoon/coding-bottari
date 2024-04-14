@@ -12,6 +12,13 @@
 
 [모듈러 산술](https://ko.wikipedia.org/wiki/%EB%AA%A8%EB%93%88%EB%9F%AC_%EC%82%B0%EC%88%A0)
 
+[hello world js](https://helloworldjavascript.net/)
+
+[우아콘 - module federation](https://www.youtube.com/watch?v=-jYSGaPAEHE)
+[김코더 - module federation](https://www.kimcoder.io/blog/micro-frontend-module-federation)
+[maxkim - module federation](https://maxkim-j.github.io/posts/runtime-integration-micro-frontends/)
+[nx - module federation](https://nx.dev/concepts/module-federation/module-federation-and-nx)
+
 ## Nx commands
 
 ```bash
