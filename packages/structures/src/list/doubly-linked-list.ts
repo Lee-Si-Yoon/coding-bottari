@@ -20,6 +20,7 @@ interface DoublyLinkedListInterface<T> {
   remove: (index: number) => void;
 }
 
+// TODO: make insertBack & removeBack O(1)
 export class DoublyLinkedList<T> implements DoublyLinkedListInterface<T> {
   constructor(
     private head: Node<T> | undefined = undefined,
