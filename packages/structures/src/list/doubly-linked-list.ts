@@ -1,29 +1,15 @@
 class Node<T> {
-  public value: T;
-  public previous: Node<T> | undefined;
-  public next: Node<T> | undefined;
-
-  constructor(value: T, previous?: Node<T>, next?: Node<T>) {
-    this.value = value;
-    this.previous = previous;
-    this.next = next;
-  }
+  constructor(
+    public value: T,
+    public previous: Node<T> | undefined = undefined,
+    public next: Node<T> | undefined = undefined,
+  ) {}
 }
 
-interface DoublyLinkedListInterface<T> {
-  size: number;
-  get: (index: number) => T | undefined;
-  print: VoidFunction;
-
-  insert: (index: number, value: T) => void;
-  append: (value: T) => void;
-  remove: (index: number) => void;
-}
-
-// TODO: make insertBack & removeBack O(1)
-export class DoublyLinkedList<T> implements DoublyLinkedListInterface<T> {
+export class DoublyLinkedList<T> {
   constructor(
     private head: Node<T> | undefined = undefined,
+    private tail: Node<T> | undefined = undefined,
     private _size = 0,
   ) {}
 
@@ -47,10 +33,80 @@ export class DoublyLinkedList<T> implements DoublyLinkedListInterface<T> {
   }
 
   // O(n)
-  get: (index: number) => T | undefined = (index: number) => {
+  get(index: number): T | undefined {
     const node = this.getNodeAtIndex(index);
-    if (node) return node.value;
-  };
+    return node?.value;
+  }
+
+  // O(n)
+  set(index: number, value: T): void {
+    const currentNode = this.getNodeAtIndex(index);
+    currentNode!.value = value;
+  }
+
+  // O(n)
+  insert(index: number, value: T): void {
+    if (index < 0 || index >= this._size || !this.head) return;
+    const newNode = new Node(value);
+
+    if (index === 0) {
+      newNode.next = this.head;
+      this.head.previous = newNode;
+      this.head = newNode;
+      this._size++;
+    } else {
+      const prevNode = this.getNodeAtIndex(index - 1);
+
+      newNode.next = prevNode!.next;
+      prevNode!.next!.previous = newNode;
+
+      prevNode!.next = newNode;
+      newNode.previous = prevNode;
+    }
+
+    this._size += 1;
+  }
+
+  // O(1)
+  insertBack(value: T): void {
+    const newNode = new Node(value);
+
+    if (!this.head) {
+      this.head = newNode;
+      this.tail = newNode;
+    } else {
+      this.tail!.next = newNode;
+      newNode.previous = this.tail;
+
+      this.tail = this.tail?.next;
+    }
+
+    this._size += 1;
+  }
+
+  // O(n)
+  remove(index: number): void {
+    if (index < 0 || index >= this._size || !this.head) return;
+
+    if (index === 0) {
+      this.head = this.head.next;
+      delete this.head?.previous;
+    } else {
+      const prevNode = this.getNodeAtIndex(index - 1);
+
+      prevNode!.next = prevNode!.next?.next;
+      prevNode!.next!.previous = prevNode;
+    }
+
+    this._size -= 1;
+  }
+
+  // O(1)
+  removeBack(): void {
+    this.tail = this.tail?.previous;
+    delete this.tail?.next;
+    this._size -= 1;
+  }
 
   // O(n)
   print: VoidFunction = () => {
@@ -65,68 +121,11 @@ export class DoublyLinkedList<T> implements DoublyLinkedListInterface<T> {
       }
     }
 
-    // eslint-disable-next-line no-console --- print function
     console.log(output);
   };
 
-  // O(n)
-  insert(index: number, value: T): void {
-    if (index < 0 || index >= this._size || !this.head) return;
-    const newNode = new Node(value);
-
-    if (index === 0) {
-      newNode.next = this.head;
-      this.head.previous = newNode;
-      this.head = newNode;
-      this._size++;
-    } else {
-      const currentNode = this.getNodeAtIndex(index - 1);
-      if (!currentNode) return;
-
-      newNode.next = currentNode.next;
-      if (currentNode.next) {
-        currentNode.next.previous = newNode;
-      }
-
-      currentNode.next = newNode;
-      newNode.previous = currentNode;
-    }
-
-    this._size += 1;
-  }
-
-  // O(n)
-  append(value: T): void {
-    const newNode = new Node(value);
-
-    if (this._size === 0 && !this.head) {
-      this.head = newNode;
-    } else {
-      const lastNode = this.getNodeAtIndex(this._size - 1);
-      if (lastNode) {
-        lastNode.next = newNode;
-        newNode.previous = lastNode;
-      }
-    }
-
-    this._size += 1;
-  }
-
-  // O(n)
-  remove(index: number): void {
-    if (index < 0 || index >= this._size || !this.head) return;
-
-    if (index === 0) {
-      this.head = this.head.next;
-      delete this.head?.previous;
-    } else {
-      const currentNode = this.getNodeAtIndex(index);
-      if (!currentNode) return;
-
-      currentNode.next = currentNode.next?.next;
-      if (currentNode.next) {
-        currentNode.next.previous = currentNode;
-      }
-    }
+  printHeadAndTail(): void {
+    console.log('head:', this.head);
+    console.log('tail', this.tail);
   }
 }
