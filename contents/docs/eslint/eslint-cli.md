@@ -1,3 +1,9 @@
+---
+title: eslint-cli
+description: useful commands with eslint
+date: 2024-03-11T14:47:33.000Z
+---
+
 # eslint-cli
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
@@ -11,7 +17,7 @@
 ## 유용한 커맨드들
 
 ```bash
-npx eslint --print-config <target to know> 
+npx eslint --print-config <target to know>
 #특정 파일을 어떤 eslinctrc로 돌리고 있는지 알아내기
 
 TIMING=1 npx eslint <directory>

@@ -1,3 +1,11 @@
 {
-  "recommendations": ["nrwl.angular-console"]
+  "recommendations": [
+    "nrwl.angular-console",
+    "eliostruyf.vscode-front-matter",
+    "DavidAnson.vscode-markdownlint",
+    "bierner.github-markdown-preview",
+    "Shinotatwu-DS.file-tree-generator",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode"
+  ]
 }
