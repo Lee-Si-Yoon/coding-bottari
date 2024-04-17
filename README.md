@@ -19,6 +19,10 @@
 [maxkim - module federation](https://maxkim-j.github.io/posts/runtime-integration-micro-frontends/)
 [nx - module federation](https://nx.dev/concepts/module-federation/module-federation-and-nx)
 
+[lit - web component](https://lit.dev/docs/frameworks/react/)
+[luigi - web component](https://luigi-project.io/)
+[preact + react = webcomponent article](https://www.voorhoede.nl/en/blog/building-design-system-react-web-components/)
+
 ## Nx commands
 
 ```bash
