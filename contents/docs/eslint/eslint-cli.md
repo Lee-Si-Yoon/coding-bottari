@@ -11,7 +11,11 @@
 ## 유용한 커맨드들
 
 ```bash
-npx eslint --print-config <target to know> #특정 파일을 어떤 eslinctrc로 돌리고 있는지 알아내기
+npx eslint --print-config <target to know> 
+#특정 파일을 어떤 eslinctrc로 돌리고 있는지 알아내기
+
+TIMING=1 npx eslint <directory>
+# https://eslint.org/docs/latest/extend/custom-rules#per-rule-performance
 
 DEBUG=eslint:cli-engine npx eslint <directory> #eslint 돌리면 어떤 파일들이 돌려지고 있는지 알기
 
