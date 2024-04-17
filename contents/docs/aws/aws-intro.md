@@ -1,5 +1,12 @@
 # AWS Intro
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [AWS Intro](#aws-intro)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 Cloud computing - 남의 컴퓨터를 빌려서 원격 제어를 통해서 사용하는 것
 Host - 인터넷에 연결된 컴퓨터 한대
 Hosting - host를 빌려서 서버로 사용가능하도록 사업을 hosting 사업이라고 함
