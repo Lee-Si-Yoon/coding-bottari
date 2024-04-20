@@ -1,6 +1,6 @@
 ---
 title: Stack & Que 활용 문제들
-date: 2024-04-17T15:37:19.788Z
+date: 2024-04-20T11:43:34.200Z
 ---
 
 # Stack & Que 활용 문제들
@@ -9,6 +9,7 @@ date: 2024-04-17T15:37:19.788Z
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 - [Valid parantheses](#valid-parantheses)
+- [Daily temperatures](#daily-temperatures)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -53,5 +54,41 @@ var isValid = function (s) {
   }
 
   return true;
+};
+```
+
+## Daily temperatures
+
+[link](https://leetcode.com/problems/daily-temperatures/)
+
+제약조건
+
+$$
+\begin{matrix}
+1 <= temperatures.length <= 10^5 \\
+\end{matrix}
+$$
+
+$O(n)$까지는 가능함.
+
+```js
+/**
+ * @param {number[]} temperatures
+ * @return {number[]}
+ */
+var dailyTemperatures = function (temperatures) {
+  const answer = Array(temperatures.length).fill(0);
+  const stack = [];
+
+  temperatures.forEach((temp, day) => {
+    while (stack.length > 0 && stack[stack.length - 1].temp < temp) {
+      const { day: prevDay } = stack.pop();
+      answer[prevDay] = day - prevDay;
+    }
+
+    stack.push({ day, temp });
+  });
+
+  return answer;
 };
 ```
