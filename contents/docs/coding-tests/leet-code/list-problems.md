@@ -1,3 +1,14 @@
+---
+title: list-problems
+description: ''
+date: 2024-03-10T13:25:14.000Z
+preview: ''
+draft: true
+tags: []
+categories: []
+type: default
+---
+
 # list 문제들
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
@@ -74,25 +85,6 @@ const twoSum = function (nums, target) {
     if (sum === target) {
       return [nums[l].index, nums[r].index];
     }
-  }
-};
-```
-
-더 빠르게한다면 hash로 접근하기
-
-```js
-// runtime: 49ms
-const twoSum = (nums, target) => {
-  const map = {};
-
-  for (let i = 0; i < nums.length; i++) {
-    const another = target - nums[i];
-
-    if (another in map) {
-      return [map[another], i];
-    }
-
-    map[nums[i]] = i;
   }
 };
 ```
