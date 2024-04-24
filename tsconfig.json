@@ -4,6 +4,8 @@
     "baseUrl": ".",
     "paths": {
       "@bottari/ui": ["packages/ui/src/index.ts"],
+      "@bottari/structure": ["packages/structures/src/index.ts"],
+      "@bottari/playground/*": ["apps/playground/src/*"],
     },
     "noEmit": true,
   },
