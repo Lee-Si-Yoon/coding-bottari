@@ -14,7 +14,10 @@ type: default
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-- [Tree](#tree)
+- [Terms](#terms)
+- [Binary Tree](#binary-tree)
+- [Tree Traversal](#tree-traversal)
+- [시간복잡도](#%EC%8B%9C%EA%B0%84%EB%B3%B5%EC%9E%A1%EB%8F%84)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -60,7 +63,7 @@ type: default
 
 접근과 방문을 나눠서 생각해야함. 접근은 말그대로 read만 하는 것 무언가 행위는 없음. 방문은 접근해서 무얼 했을 때.
 
-너비 우선 탐색BFS은 루트 노드를 기준으로 한 레벨씩 다 탐색하고 다음 레벨을 탐색하는 방식. Queue를 이용하게 됨.
+너비 우선 탐색BFS은 루트 노드를 기준으로 한 레벨씩 다 탐색하고 다음 레벨을 탐색하는 방식. Queue를 이용하게 됨. level order traversal이라고도 부름
 
 깊이 우선 탐색DFS은 Stack + 반복문 혹은 재귀를 이용해서 구현하는 방식이 있음. 보통은 재귀를 많이 씀.
 
@@ -69,3 +72,9 @@ DFS의 방문에는 3가지 방식이 있음.
 - 전위순회preorder - 다음 노드L,R에 접근하기 전에 현재 노드에서 먼저 특정행위를 먼저 하는 것
 - 중위순회inorder - 다음 노드L에 접근 하고 -> 특정 행위를 한 다음에 -> 다음 노드R에 접근하는 것, 한쪽 자식들을 다 방문한 이후에 나 자신을 방문하고 다른 쪽 자식을 방문하는 방식. 흐름 상 백도를 할 때 방문.
 - 후위순회postorder - 다음 노드L,R에 접근한 이후에 특정 행위를 하는 것. 모든 자식을 방문하고 나 자신을 방문하는 방식.
+
+## 시간복잡도
+
+재귀의 시간복잡도 = 재귀 함수 호출 수 $\times$ (재귀 하나당) 시간 복잡도
+
+재구기 함수 호출 수 = $n$ $\times$ 재귀 함수 하나당 시간 복잡도 = $O(1)$ $=$ 전위, 중위, 후위의 시간 복잡도는 $O(n)$
