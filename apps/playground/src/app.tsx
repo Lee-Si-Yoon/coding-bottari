@@ -6,7 +6,6 @@ function App(): React.ReactNode {
   return (
     <CustomButton
       onClick={() => {
-        // eslint-disable-next-line no-alert -- for test
         window.alert('clicked');
       }}
     >

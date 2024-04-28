@@ -1,0 +1,60 @@
+{
+  "name": "host",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "nx exec -- next dev",
+    "build": "nx exec -- next build",
+    "start": "nx exec -- next start",
+    "lint": "nx exec -- next lint",
+    "doctoc": "nx exec -- doctoc . --github --notitle",
+    "clean": "nx exec -- rimraf .next"
+  },
+  "dependencies": {
+    "next": "14.2.3",
+    "react": "^18",
+    "react-dom": "^18",
+    "ui": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.3",
+    "typescript": "^5"
+  },
+  "nx": {
+    "includedScripts": [
+      "dev",
+      "build",
+      "start",
+      "doctoc",
+      "clean"
+    ],
+    "targets": {
+      "dev": {
+        "cache": false
+      },
+      "start": {
+        "cache": false
+      },
+      "build": {
+        "cache": true,
+        "inputs": [
+          "production",
+          "^production"
+        ],
+        "outputs": [
+          "{workspaceRoot}/.next"
+        ],
+        "dependsOn": [
+          "^build"
+        ],
+        "options": {
+          "cwd": "apps/host"
+        }
+      }
+    }
+  }
+}
