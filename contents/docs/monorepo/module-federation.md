@@ -11,6 +11,13 @@ type: default
 
 # Module federation
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [Concept](#concept)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 - [martin fowler](https://martinfowler.com/articles/micro-frontends.html)
 - [nx - module federation](https://nx.dev/concepts/module-federation/module-federation-and-nx)
 - [우아콘 - module federation](https://www.youtube.com/watch?v=-jYSGaPAEHE)
