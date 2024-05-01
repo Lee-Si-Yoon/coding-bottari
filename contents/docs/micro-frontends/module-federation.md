@@ -18,11 +18,12 @@ type: default
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-- [martin fowler](https://martinfowler.com/articles/micro-frontends.html)
 - [nx - module federation](https://nx.dev/concepts/module-federation/module-federation-and-nx)
 - [우아콘 - module federation](https://www.youtube.com/watch?v=-jYSGaPAEHE)
 - [김코더 - module federation](https://www.kimcoder.io/blog/micro-frontend-module-federation)
 - [maxkim - module federation](https://maxkim-j.github.io/posts/runtime-integration-micro-frontends/)
+
+- [official module federation docs](https://module-federation.io/blog/announcement.html)
 
 ## Concept
 
