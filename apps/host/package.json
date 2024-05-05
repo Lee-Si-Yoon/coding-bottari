@@ -3,28 +3,32 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "nx exec -- next dev",
-    "build": "nx exec -- next build",
+    "dev": "NEXT_PRIVATE_LOCAL_WEBPACK=true nx exec -- next dev",
+    "build": "NEXT_PRIVATE_LOCAL_WEBPACK=true nx exec -- next build",
     "start": "nx exec -- next start",
     "lint": "nx exec -- next lint",
     "doctoc": "nx exec -- doctoc . --github --notitle",
     "clean": "nx exec -- rimraf .next"
   },
   "dependencies": {
+    "@module-federation/nextjs-mf": "^8",
+    "next": "^14",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.3",
     "ui": "workspace:*"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
     "eslint": "^8",
-    "eslint-config-next": "14.2.3"
+    "eslint-config-next": "^14",
+    "postcss": "^8",
+    "tailwindcss": "^3",
+    "typescript": "^5",
+    "webpack": "^5",
+    "webpack-cli": "^5",
+    "webpack-dev-server": "^5"
   },
   "nx": {
     "includedScripts": [
