@@ -2,8 +2,8 @@
  * @type {import('eslint').Linter.Config}
  */
 module.exports = {
-  extends: ['plugin:@nx/react', '../../.eslintrc.cjs'],
-  ignorePatterns: ['!**/*', '**/node_modules/**', '**/dist/**'],
+  extends: ['../../.eslintrc.cjs'],
+  ignorePatterns: ['!**/*', '**/node_modules/**'],
   overrides: [
     {
       files: ['*.ts', '*.tsx', '*.js', '*.jsx'],

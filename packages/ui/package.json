@@ -6,19 +6,23 @@
     "clean": "rimraf ./dist",
     "compile": "tsc -p tsconfig.build.json",
     "doctoc": "nx exec -- doctoc . --github --notitle",
-    "lint": "nx lint --config ./.eslintrc.cjs"
+    "lint": "nx lint --config ./.eslintrc.cjs",
+    "test": "webpack"
   },
   "dependencies": {
     "structures": "workspace:*"
   },
   "devDependencies": {
-    "@types/react": "^18.2.43",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "typescript": "^5.3.3"
+    "@types/react": "^18",
+    "react": "^18",
+    "react-dom": "^18",
+    "ts-loader": "^9",
+    "typescript": "^5",
+    "webpack": "^5",
+    "webpack-cli": "^5"
   },
   "peerDependencies": {
-    "react": "~18.2.0"
+    "react": "~18"
   },
   "nx": {
     "includedScripts": [
