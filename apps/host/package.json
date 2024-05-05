@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "NEXT_PRIVATE_LOCAL_WEBPACK=true nx exec -- next dev",
-    "build": "NEXT_PRIVATE_LOCAL_WEBPACK=true nx exec -- next build",
+    "dev": "rimraf .next && NEXT_PRIVATE_LOCAL_WEBPACK=true next dev",
+    "build": "NEXT_PRIVATE_LOCAL_WEBPACK=true next build",
     "start": "nx exec -- next start",
     "lint": "nx exec -- next lint",
     "doctoc": "nx exec -- doctoc . --github --notitle",

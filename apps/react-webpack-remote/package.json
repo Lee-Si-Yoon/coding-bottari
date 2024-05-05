@@ -1,10 +1,9 @@
 {
-  "name": "basic-react",
+  "name": "react-webpack-remote",
   "version": "1.0.0",
   "scripts": {
-    "dev": "webpack-cli serve",
-    "build": "webpack --mode production",
-    "serve": "serve dist -p 3002",
+    "dev": "cross-env NODE_ENV=development webpack-cli serve --config ./webpack/webpack.config.dev.js",
+    "build": "cross-env NODE_ENV=production webpack --config ./webpack/webpack.config.prod.js",
     "clean": "rm -rf dist"
   },
   "dependencies": {
@@ -14,15 +13,17 @@
   },
   "devDependencies": {
     "@module-federation/enhanced": "^0.1.11",
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
     "html-webpack-plugin": "^5",
     "ts-loader": "^9",
+    "typescript": "^5",
     "webpack": "^5",
     "webpack-cli": "^5",
-    "webpack-dev-server": "^5"
+    "webpack-dev-server": "^5",
+    "mini-css-extract-plugin": "^2",
+    "cross-env": "^7"
   }
 }
