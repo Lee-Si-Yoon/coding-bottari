@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.build.json",
+
+  "compilerOptions": {
+    "moduleResolution": "Bundler",
+    "module": "ESNext",
+    "noEmit": true,
+    "jsx": "react-jsx"
+  },
+
+  "include": ["src/**/*.ts", "src/**/*.tsx"]
+}

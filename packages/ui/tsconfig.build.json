@@ -2,9 +2,13 @@
   "extends": "../../tsconfig.build.json",
 
   "compilerOptions": {
-    "outDir": "./dist",
-    "jsx": "react-jsx",
-    "esModuleInterop": true
+    "moduleResolution": "NodeNext",
+    "module": "NodeNext",
+    "outDir": "dist",
+    "sourceMap": true,
+    "composite": true,
+    "declarationMap": true,
+    "jsx": "react-jsx"
   },
 
   "include": ["src/**/*.ts", "src/**/*.tsx"]

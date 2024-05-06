@@ -4,7 +4,6 @@
   "compilerOptions": {
     "jsx": "react-jsx",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "esModuleInterop": true,
   },
 
   "include": ["src/**/*.ts", "src/**/*.tsx"],

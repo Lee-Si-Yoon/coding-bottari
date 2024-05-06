@@ -9,6 +9,5 @@
         "apps/react-webpack-remote/src/Button.tsx",
       ],
     },
-    "noEmit": true,
   },
 }

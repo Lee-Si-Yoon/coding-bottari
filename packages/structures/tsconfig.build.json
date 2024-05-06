@@ -1,8 +1,12 @@
 {
   "extends": "../../tsconfig.build.json",
-
   "compilerOptions": {
-    "outDir": "./dist",
+    "moduleResolution": "NodeNext",
+    "module": "NodeNext",
+    "outDir": "dist",
+    "sourceMap": true,
+    "composite": true,
+    "declarationMap": true,
     "allowJs": true
   },
 

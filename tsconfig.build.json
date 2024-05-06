@@ -1,19 +1,17 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
-    "target": "es5",
-
-    "noEmit": false,
-    "declaration": true,
-    "declarationMap": true,
-    "sourceMap": true,
-    "skipLibCheck": true,
+    /* Base options */
     "esModuleInterop": true,
+    "skipLibCheck": true,
+    "target": "es2022",
+    "verbatimModuleSyntax": true,
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
 
+    /* Strictness */
     "strict": true,
-    "noImplicitAny": true,
-
-    "noEmitOnError": true
+    "noUncheckedIndexedAccess": true,
+    "noImplicitAny": true
   },
   "exclude": ["node_modules", "dist"]
 }
