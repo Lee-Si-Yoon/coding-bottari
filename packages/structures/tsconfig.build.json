@@ -1,13 +1,9 @@
 {
   "extends": "../../tsconfig.build.json",
   "compilerOptions": {
-    "moduleResolution": "NodeNext",
-    "module": "NodeNext",
-    "outDir": "dist",
-    "sourceMap": true,
-    "composite": true,
-    "declarationMap": true,
-    "allowJs": true
+    "moduleResolution": "Bundler",
+    "module": "ESNext",
+    "noEmit": true
   },
 
   "include": ["src/**/*.ts", "src/**/*.js"]

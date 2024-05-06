@@ -4,7 +4,7 @@
   "scripts": {
     "build": "nx exec -- pnpm run clean && pnpm run compile",
     "clean": "rimraf ./dist",
-    "compile": "tsc -p tsconfig.build.json",
+    "compile": "webpack --config ./webpack/webpack.config.js",
     "doctoc": "nx exec -- doctoc . --github --notitle",
     "lint": "nx lint --config ./.eslintrc.cjs"
   },
@@ -16,7 +16,8 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "typescript": "^5"
+    "ts-loader": "^9",
+    "webpack": "^5"
   },
   "peerDependencies": {
     "react": "~18"

@@ -2,12 +2,9 @@
   "extends": "../../tsconfig.build.json",
 
   "compilerOptions": {
-    "moduleResolution": "NodeNext",
-    "module": "NodeNext",
-    "outDir": "dist",
-    "sourceMap": true,
-    "composite": true,
-    "declarationMap": true,
+    "moduleResolution": "Bundler",
+    "module": "ESNext",
+    "noEmit": true,
     "jsx": "react-jsx"
   },
 

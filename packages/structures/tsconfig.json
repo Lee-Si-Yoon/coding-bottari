@@ -2,8 +2,9 @@
   "extends": "../../tsconfig.json",
 
   "compilerOptions": {
-    "moduleResolution": "NodeNext",
-    "module": "NodeNext",
+    "lib": ["es2022"],
+    "moduleResolution": "Bundler",
+    "module": "ESNext",
   },
 
   "include": ["src/**/*.ts"],

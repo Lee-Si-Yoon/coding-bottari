@@ -1,7 +1,6 @@
 import { CustomButton } from '@bottari/ui';
 import { Inter } from 'next/font/google';
 import React from 'react';
-
 import ReactWebpackRemoteButton from '@bottari/reactWebpack/button';
 
 const inter = Inter({ subsets: ['latin'] });

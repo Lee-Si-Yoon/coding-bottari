@@ -10,12 +10,13 @@
   "scripts": {
     "build": "pnpm run clean && pnpm run compile",
     "clean": "rimraf ./dist",
-    "compile": "tsc -p tsconfig.build.json",
+    "compile": "webpack --config ./webpack/webpack.config.js",
     "doctoc": "nx exec -- doctoc . --github --notitle",
     "lint": "nx lint --config ./.eslintrc.cjs"
   },
   "devDependencies": {
-    "typescript": "^5.3.3"
+    "ts-loader": "^9",
+    "webpack": "^5"
   },
   "nx": {
     "includedScripts": [

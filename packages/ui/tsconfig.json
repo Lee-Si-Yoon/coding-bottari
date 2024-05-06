@@ -2,8 +2,10 @@
   "extends": "../../tsconfig.json",
 
   "compilerOptions": {
-    "jsx": "react-jsx",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "moduleResolution": "Bundler",
+    "module": "ESNext",
+    "jsx": "react-jsx",
   },
 
   "include": ["src/**/*.ts", "src/**/*.tsx"],
