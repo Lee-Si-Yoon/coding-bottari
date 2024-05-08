@@ -3,7 +3,7 @@
  */
 module.exports = {
   extends: ['next/core-web-vitals', '../../.eslintrc.cjs'],
-  ignorePatterns: ['!**/*', '**/node_modules/**', '**/.next/**'],
+  ignorePatterns: ['!**/*', 'node_modules', '.next'],
   overrides: [
     {
       files: ['*.ts', '*.tsx', '*.js', '*.jsx'],
