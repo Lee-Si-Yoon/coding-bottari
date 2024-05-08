@@ -9,6 +9,21 @@ categories: []
 type: default
 ---
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [title: tsconfig cheatsheet
+  description: ''
+  date: 2024-05-06T14:31:57.488Z
+  preview: ''
+  draft: true
+  tags: []
+  categories: []
+  type: default](#title-tsconfig-cheatsheet%0Adescription-%0Adate-2024-05-06t143157488z%0Apreview-%0Adraft-true%0Atags-%0Acategories-%0Atype-default)
+- [Tsconfig cheatsheet](#tsconfig-cheatsheet)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Tsconfig cheatsheet
 
 ```json
