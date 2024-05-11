@@ -20,6 +20,8 @@ type: default
   - [인접 리스트adjacency list](#%EC%9D%B8%EC%A0%91-%EB%A6%AC%EC%8A%A4%ED%8A%B8adjacency-list)
   - [인접 행렬adjacency matrix](#%EC%9D%B8%EC%A0%91-%ED%96%89%EB%A0%ACadjacency-matrix)
   - [암시적 그래프implicit graph](#%EC%95%94%EC%8B%9C%EC%A0%81-%EA%B7%B8%EB%9E%98%ED%94%84implicit-graph)
+- [그래프 순회](#%EA%B7%B8%EB%9E%98%ED%94%84-%EC%88%9C%ED%9A%8C)
+  - [순회의 시간복잡도](#%EC%88%9C%ED%9A%8C%EC%9D%98-%EC%8B%9C%EA%B0%84%EB%B3%B5%EC%9E%A1%EB%8F%84)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -103,8 +105,8 @@ const graph = [
 ```js
 // 모든 칸을 정점으로 지정하고 간선을 표현해주는 건 비효율
 const adjacencyList = {
-  1: [2, 6],
-  2: [1, 3, 7],
+  1: [2, 6], // 첫번째 칸이 두번째 그리고 다음 열 첫번째
+  2: [1, 3, 7], // 두번째 칸이 첫번째 세번째 그리고 다음열 두번째
   3: [2, 4, 8],
   ...
 };
@@ -118,3 +120,11 @@ const implicitGraph = [
   [1, 1, 1, 1, 1],
 ];
 ```
+
+## 그래프 순회
+
+각 장점을 방문하는 과정, BFS 그리고 DFS이 있다. 트리와 마찬가지로 완전탐색이다.
+
+### 순회의 시간복잡도
+
+각각의 순회는 정점$V$들을 탐색해야하고 그러기 위해 모든 간선$E$들을 확인해봐야 하기에 시간복잡도는 $O(V + E)$
