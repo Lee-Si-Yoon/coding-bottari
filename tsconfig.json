@@ -3,11 +3,11 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@bottari/ui": ["packages/ui/src/index.ts"],
-      "@bottari/structure": ["packages/structures/src/index.ts"],
-      "@bottari/reactWebpack/button": [
-        "apps/react-webpack-remote/src/Button.tsx",
+      "@bottari/reactWebpack/remote": [
+        "apps/react-webpack-remote/src/remote-entry.ts",
       ],
+      "@bottari/structure": ["packages/structures/src/index.ts"],
+      "@bottari/ui": ["packages/ui/src/index.ts"],
     },
   },
 }

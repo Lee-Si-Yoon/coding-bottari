@@ -1,7 +1,7 @@
 import { CustomButton } from '@bottari/ui';
 import { Inter } from 'next/font/google';
 import React from 'react';
-import ReactWebpackRemoteButton from '@bottari/reactWebpack/button';
+import ReactWebpackApp from '@bottari/reactWebpack/remote';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -14,7 +14,7 @@ export default function Home() {
       <h2>Host - Button</h2>
       <CustomButton>CustomButton</CustomButton>
       <h2>React remote - Button</h2>
-      <ReactWebpackRemoteButton />
+      <ReactWebpackApp />
     </main>
   );
 }

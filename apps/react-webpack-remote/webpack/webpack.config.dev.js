@@ -5,7 +5,7 @@ const port = 3001;
 /** @type {import('webpack').Configuration} */
 module.exports = {
   mode: 'development',
-  entry: ['./src/index.tsx'],
+  entry: ['./src/main.tsx'],
   module: {
     rules: require('./webpack.rules'),
   },

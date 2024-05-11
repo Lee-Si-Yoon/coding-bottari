@@ -10,7 +10,7 @@ const moduleFederationConfig = {
   name: 'reactRemote',
   filename: 'remoteEntry.js',
   exposes: {
-    './Button': './src/Button',
+    './Module': './src/remote-entry.ts',
   },
   shared: {
     ...dependencies,
