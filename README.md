@@ -38,3 +38,8 @@ npx nx format:write
 - [lit - web component](https://lit.dev/docs/frameworks/react/)
 - [luigi - web component](https://luigi-project.io/)
 - [preact + react = webcomponent article](https://www.voorhoede.nl/en/blog/building-design-system-react-web-components/)
+
+- [webpack - withWeb](https://github.com/nrwl/nx/blob/master/packages/webpack/src/plugins/nx-webpack-plugin/lib/apply-web-config.ts)
+- [webpack - withReact](https://github.com/nrwl/nx/blob/master/packages/react/plugins/nx-react-webpack-plugin/lib/apply-react-config.ts)
+- [webpack - withModulefederation](https://github.com/nrwl/nx/blob/master/packages/react/src/module-federation/with-module-federation.ts)
+- [webpack - composeplugins](https://github.com/nrwl/nx/blob/master/packages/next/src/utils/compose-plugins.ts)
