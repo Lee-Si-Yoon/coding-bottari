@@ -43,3 +43,9 @@ npx nx format:write
 - [webpack - withReact](https://github.com/nrwl/nx/blob/master/packages/react/plugins/nx-react-webpack-plugin/lib/apply-react-config.ts)
 - [webpack - withModulefederation](https://github.com/nrwl/nx/blob/master/packages/react/src/module-federation/with-module-federation.ts)
 - [webpack - composeplugins](https://github.com/nrwl/nx/blob/master/packages/next/src/utils/compose-plugins.ts)
+
+- [docker 실습](https://www.youtube.com/watch?v=HbKCxBFT2wk&list=PLRx0vPvlEmdChjc6N3JnLaX-Gihh5pHcx)
+
+- [liveblocks - nextjs multiplayer](https://ikehakinyemi.medium.com/how-to-create-a-multiplayer-online-form-with-next-js-and-liveblocks-d90f11649dde)
+
+- [aws FE deploy](https://medium.com/mycloudseries/frontend-deployments-in-aws-s3-cloudfront-vs-aws-amplify-vs-ec2-94f9904d934f)
