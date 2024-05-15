@@ -12,18 +12,20 @@
     "ui": "workspace:*"
   },
   "devDependencies": {
-    "@module-federation/enhanced": "^0.1.11",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
-    "html-webpack-plugin": "^5",
-    "ts-loader": "^9",
     "typescript": "^5",
     "webpack": "^5",
     "webpack-cli": "^5",
     "webpack-dev-server": "^5",
+    "@module-federation/enhanced": "^0.1.11",
+    "html-webpack-plugin": "^5",
     "mini-css-extract-plugin": "^2",
+    "ts-loader": "^9",
+    "css-loader": "^7",
+    "style-loader": "^4",
     "cross-env": "^7"
   }
 }

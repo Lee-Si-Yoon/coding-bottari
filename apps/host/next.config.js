@@ -1,11 +1,11 @@
 const { NextFederationPlugin } = require('@module-federation/nextjs-mf');
 
-const dependencies = require('./package.json').dependencies;
-
 /** @type {import('next').NextConfig} */
 module.exports = {
   reactStrictMode: true,
   transpilePackages: ['@bottari/ui'],
+  trailingSlash: true,
+  // output: 'export',
   webpack: (
     config,
     { buildId, dev, isServer, defaultLoaders, nextRuntime, webpack },
@@ -14,7 +14,9 @@ module.exports = {
       new NextFederationPlugin({
         name: 'host',
         remotes: {
-          reactRemote: 'reactRemote@http://localhost:3001/remoteEntry.js',
+          reactRemote: dev
+            ? 'reactRemote@http://localhost:3001/remoteEntry.js'
+            : 'https://dydtgsxgx6ant.cloudfront.net/remoteEntry.js',
         },
         filename: 'static/chunks/remoteEntry.js',
         shared: {},

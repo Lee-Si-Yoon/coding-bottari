@@ -1,20 +1,47 @@
 import { CustomButton } from '@bottari/ui';
-import { Inter } from 'next/font/google';
 import React from 'react';
 import ReactWebpackApp from '@bottari/reactWebpack/remote';
 
-const inter = Inter({ subsets: ['latin'] });
+import type { NextPageWithLayout } from './_app';
+import Layout from '../src/layout/Layout';
 
-export default function Home() {
+const Page: NextPageWithLayout = () => {
+  const [data, setData] = React.useState('');
+
+  const getHello = async () => {
+    const response = await fetch('/api/hello', {
+      method: 'GET',
+    });
+
+    const data = await response.json();
+
+    setData(JSON.stringify(data, null, 1));
+  };
+
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center ${inter.className}`}
-    >
-      <h1>Next JS and React</h1>
-      <h2>Host - Button</h2>
-      <CustomButton>CustomButton</CustomButton>
-      <h2>React remote - Button</h2>
-      <ReactWebpackApp />
-    </main>
+    <>
+      <section>
+        <CustomButton
+          onClick={() => {
+            if (data) {
+              setData('');
+            } else {
+              getHello();
+            }
+          }}
+        >
+          CustomButton from @bottari/ui
+        </CustomButton>
+        <i> {data}</i>
+        <h2>React remote - Button</h2>
+        <ReactWebpackApp />
+      </section>
+    </>
   );
-}
+};
+
+Page.getLayout = function getLayout(page: React.ReactElement) {
+  return <Layout>{page}</Layout>;
+};
+
+export default Page;

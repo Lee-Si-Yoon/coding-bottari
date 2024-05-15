@@ -49,3 +49,4 @@ npx nx format:write
 - [liveblocks - nextjs multiplayer](https://ikehakinyemi.medium.com/how-to-create-a-multiplayer-online-form-with-next-js-and-liveblocks-d90f11649dde)
 
 - [aws FE deploy](https://medium.com/mycloudseries/frontend-deployments-in-aws-s3-cloudfront-vs-aws-amplify-vs-ec2-94f9904d934f)
+- aws cloudformation

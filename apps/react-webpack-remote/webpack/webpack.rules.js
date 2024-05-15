@@ -16,10 +16,28 @@ module.exports = [
   },
   {
     // CSS Loader
-    test: /\.css$/,
+    test: /\.css$/i,
+    exclude: /\.module\.css$/,
     use: [
       { loader: inDev() ? 'style-loader' : MiniCssExtractPlugin.loader },
       { loader: 'css-loader' },
+    ],
+  },
+  {
+    // CSS Module
+    test: /\.module\.css$/i,
+    use: [
+      'style-loader',
+      {
+        loader: 'css-loader',
+        options: {
+          importLoaders: 1,
+          modules: {
+            mode: 'local',
+            localIdentName: '[path][name]_[local]_[hash:base64:5]',
+          },
+        },
+      },
     ],
   },
   {

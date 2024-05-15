@@ -1,7 +1,7 @@
 /** @type {import('webpack').Configuration} */
 module.exports = {
   mode: 'production',
-  entry: ['./src/index.tsx'],
+  entry: ['./src/main.tsx'],
   module: {
     rules: require('./webpack.rules'),
   },
