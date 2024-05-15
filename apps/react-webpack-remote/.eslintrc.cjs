@@ -3,18 +3,10 @@
  */
 module.exports = {
   extends: ['../../.eslintrc.cjs'],
-  ignorePatterns: ['!**/*', 'node_modules', 'dist'],
+  ignorePatterns: ['!**/*', 'node_modules', 'dist', 'webpack'],
   overrides: [
     {
-      files: ['*.ts', '*.tsx', '*.js', '*.jsx'],
-      rules: {},
-    },
-    {
-      files: ['*.ts', '*.tsx'],
-      rules: {},
-    },
-    {
-      files: ['*.js', '*.jsx'],
+      files: ['src/**/*.ts', 'src/**/*.tsx'],
       rules: {},
     },
   ],

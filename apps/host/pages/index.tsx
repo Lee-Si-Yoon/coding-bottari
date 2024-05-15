@@ -1,6 +1,7 @@
 import { CustomButton } from '@bottari/ui';
 import React from 'react';
 import ReactWebpackApp from '@bottari/reactWebpack/remote';
+import ReactCracoApp from '@bottari/reactCraco/remote';
 
 import type { NextPageWithLayout } from './_app';
 import Layout from '../src/layout/Layout';
@@ -35,6 +36,8 @@ const Page: NextPageWithLayout = () => {
         <i> {data}</i>
         <h2>React remote - Button</h2>
         <ReactWebpackApp />
+        <h2>React craco</h2>
+        <ReactCracoApp />
       </section>
     </>
   );

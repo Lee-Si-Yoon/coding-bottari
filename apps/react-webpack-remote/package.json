@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-cli serve --config ./webpack/webpack.config.dev.js",
     "build": "cross-env NODE_ENV=production webpack --config ./webpack/webpack.config.prod.js",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "lint": "nx lint --config ./.eslintrc.cjs"
   },
   "dependencies": {
     "react": "^18",
@@ -27,5 +28,25 @@
     "css-loader": "^7",
     "style-loader": "^4",
     "cross-env": "^7"
+  },
+  "nx": {
+    "includedScripts": [
+      "build"
+    ],
+    "targets": {
+      "build": {
+        "cache": true,
+        "inputs": [
+          "production",
+          "^production"
+        ],
+        "outputs": [
+          "{workspaceRoot}/dist"
+        ],
+        "dependsOn": [
+          "^build"
+        ]
+      }
+    }
   }
 }

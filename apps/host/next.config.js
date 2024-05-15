@@ -17,6 +17,7 @@ module.exports = {
           reactRemote: dev
             ? 'reactRemote@http://localhost:3001/remoteEntry.js'
             : 'https://dydtgsxgx6ant.cloudfront.net/remoteEntry.js',
+          cracoRemote: 'reactCraco@http://localhost:5000/remoteEntry.js',
         },
         filename: 'static/chunks/remoteEntry.js',
         shared: {},
