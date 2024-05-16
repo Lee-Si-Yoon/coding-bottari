@@ -95,6 +95,33 @@ importers:
         specifier: ^5
         version: 5.0.4(webpack-cli@5.1.4)(webpack@5.91.0)
 
+  apps/plain-ts:
+    devDependencies:
+      '@module-federation/enhanced':
+        specifier: ^0.1.11
+        version: 0.1.11(typescript@5.4.5)(vue-tsc@1.8.27)(webpack@5.91.0)
+      '@types/node':
+        specifier: ^20
+        version: 20.12.7
+      eslint:
+        specifier: ^8
+        version: 8.56.0
+      html-webpack-plugin:
+        specifier: ^5
+        version: 5.6.0(webpack@5.91.0)
+      ts-loader:
+        specifier: ^9
+        version: 9.5.1(typescript@5.4.5)(webpack@5.91.0)
+      webpack:
+        specifier: ^5
+        version: 5.91.0(webpack-cli@5.1.4)
+      webpack-cli:
+        specifier: ^5
+        version: 5.1.4(webpack-dev-server@5.0.4)(webpack@5.91.0)
+      webpack-dev-server:
+        specifier: ^5
+        version: 5.0.4(webpack-cli@5.1.4)(webpack@5.91.0)
+
   apps/react-craco:
     dependencies:
       react:
@@ -1920,7 +1947,7 @@ packages:
       debug: 4.3.4
       espree: 9.6.1
       globals: 13.24.0
-      ignore: 5.3.0
+      ignore: 5.3.1
       import-fresh: 3.3.0
       js-yaml: 4.1.0
       minimatch: 3.1.2

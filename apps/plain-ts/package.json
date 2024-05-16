@@ -1,0 +1,40 @@
+{
+  "name": "plain-ts",
+  "scripts": {
+    "dev": "nx exec -- webpack-cli serve --config ./webpack/webpack.config.dev.js",
+    "build": "webpack --config ./webpack/webpack.config.prod.js",
+    "clean": "rm -rf dist",
+    "lint": "nx lint --config ./.eslintrc.cjs"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "eslint": "^8",
+    "webpack": "^5",
+    "webpack-cli": "^5",
+    "webpack-dev-server": "^5",
+    "@module-federation/enhanced": "^0.1.11",
+    "html-webpack-plugin": "^5",
+    "ts-loader": "^9"
+  },
+  "nx": {
+    "includedScripts": [
+      "build",
+      "dev"
+    ],
+    "targets": {
+      "build": {
+        "cache": true,
+        "inputs": [
+          "production",
+          "^production"
+        ],
+        "outputs": [
+          "{workspaceRoot}/dist"
+        ],
+        "dependsOn": [
+          "^build"
+        ]
+      }
+    }
+  }
+}
