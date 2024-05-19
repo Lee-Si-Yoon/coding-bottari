@@ -6,6 +6,9 @@
     "clean": "rm -rf dist",
     "lint": "nx lint --config ./.eslintrc.cjs"
   },
+  "dependencies": {
+    "@fxts/core": "^0"
+  },
   "devDependencies": {
     "@types/node": "^20",
     "eslint": "^8",
