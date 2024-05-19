@@ -6,6 +6,7 @@
     "bierner.github-markdown-preview",
     "Shinotatwu-DS.file-tree-generator",
     "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode"
+    "esbenp.prettier-vscode",
+    "bierner.lit-html"
   ]
 }
