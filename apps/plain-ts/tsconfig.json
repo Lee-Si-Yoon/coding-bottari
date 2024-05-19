@@ -2,7 +2,7 @@
   "extends": "../../tsconfig.json",
 
   "compilerOptions": {
-    "lib": ["ESNext"],
+    "lib": ["DOM", "ESNext"],
     "moduleResolution": "Bundler",
     "module": "ESNext",
   },

@@ -1,32 +1,48 @@
-import { zip, pipe, flat, reduce, map, concat } from '@fxts/core';
-import { escapeHtml } from './escapeHtml';
+import { Tmpl, html } from './taggedTemperateLiterals';
 
-const html = (strings: TemplateStringsArray, ...values: unknown[]) => {
-  return pipe(
-    zip(
-      strings,
-      concat(
-        map((v) => escapeHtml(v), values),
-        [''],
-      ),
-    ),
-    flat,
-    reduce((a, b) => a + b),
-  );
+abstract class View<T> {
+  constructor(public data: T) {}
+
+  template(data: T) {
+    return html``;
+  }
+
+  render() {
+    const wrapEl = document.createElement('div');
+    wrapEl.innerHTML = this.template(this.data).toHtml();
+
+    return wrapEl.children[0]!;
+  }
+}
+
+type User = {
+  name: string;
+  age: number;
 };
 
+class UserView extends View<User[]> {
+  override template(): Tmpl {
+    return html`<div class="users">
+      ${this.data.map(
+        (user) =>
+          html`<div class="user">
+            <input type="checkbox" />
+            <span>${user.name}</span>
+            <span>${user.age}</span>
+          </div>`,
+      )}
+    </div>`;
+  }
+}
+
 const main = () => {
-  const a = 'a';
-  const b = '<script>';
-  const c = true;
+  const users: User[] = [
+    { name: 'idy', age: 20 },
+    { name: 'idy', age: 21 },
+    { name: 'idy', age: 22 },
+  ];
 
-  const result = html`<ul>
-    <li>${a}</li>
-    <li>${b}</li>
-    <li>${c}</li>
-  </ul>`;
-
-  console.log('result: ', result);
+  document.body.append(new UserView(users).render());
 };
 
 main();
