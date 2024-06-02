@@ -33,14 +33,14 @@ export const BFS = <T>(tree: SimpleBinaryTree<T>) => {
   while (que.size > 0) {
     const currentNode = que.dequeue();
     // preorder traversal
-    visited.push(currentNode.value);
+    visited.push(currentNode!.value);
 
     // approach left first
-    if (currentNode.left) {
-      que.enqueue(currentNode.left);
+    if (currentNode!.left) {
+      que.enqueue(currentNode!.left);
     }
-    if (currentNode.right) {
-      que.enqueue(currentNode.right);
+    if (currentNode!.right) {
+      que.enqueue(currentNode!.right);
     }
   }
 

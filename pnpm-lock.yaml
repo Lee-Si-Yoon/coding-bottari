@@ -222,12 +222,9 @@ importers:
 
   packages/structures:
     devDependencies:
-      ts-loader:
-        specifier: ^9
-        version: 9.5.1(typescript@5.4.5)(webpack@5.91.0)
-      webpack:
+      typescript:
         specifier: ^5
-        version: 5.91.0(webpack-cli@5.1.4)
+        version: 5.4.5
 
   packages/ui:
     dependencies:
