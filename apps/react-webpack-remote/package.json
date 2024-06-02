@@ -31,7 +31,8 @@
   },
   "nx": {
     "includedScripts": [
-      "build"
+      "build",
+      "dev"
     ],
     "targets": {
       "build": {

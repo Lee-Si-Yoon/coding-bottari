@@ -100,6 +100,9 @@ importers:
       '@fxts/core':
         specifier: ^0
         version: 0.29.0
+      structures:
+        specifier: workspace:*
+        version: link:../../packages/structures
     devDependencies:
       '@module-federation/enhanced':
         specifier: ^0.1.11

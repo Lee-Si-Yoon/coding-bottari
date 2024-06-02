@@ -16,6 +16,12 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.ts', '.jsx', '.tsx', '.css'],
+    alias: {
+      '@bottari/ui': path.resolve(
+        __dirname,
+        '../../../packages/ui/src/index.ts',
+      ),
+    },
   },
   stats: 'errors-warnings',
   devtool: 'cheap-module-source-map',
