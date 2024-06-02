@@ -15,6 +15,12 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.ts'],
+    alias: {
+      '@bottari/structure': path.resolve(
+        __dirname,
+        '../../../packages/structures/src/index.ts',
+      ),
+    },
   },
   stats: 'errors-warnings',
   devtool: 'cheap-module-source-map',

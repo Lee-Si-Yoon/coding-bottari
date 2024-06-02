@@ -16,7 +16,7 @@ export class Queue<T> {
   }
 
   // O(1)
-  dequeue(): T {
+  dequeue(): T | undefined {
     const removeTarget = this.storage[this.front];
     delete this.storage[this.front];
     this.front += 1;

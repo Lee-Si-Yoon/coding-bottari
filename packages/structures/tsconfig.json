@@ -2,9 +2,11 @@
   "extends": "../../tsconfig.json",
 
   "compilerOptions": {
-    "lib": ["es2022"],
-    "moduleResolution": "Bundler",
-    "module": "ESNext",
+    "lib": ["es2022", "DOM", "DOM.Iterable"],
+    "moduleResolution": "NodeNext",
+    "module": "NodeNext",
+    "outDir": "dist",
+    "verbatimModuleSyntax": false,
   },
 
   "include": ["src/**/*.ts"],
